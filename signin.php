@@ -77,9 +77,6 @@
 				} else {
 					
 					function signIn() {
-						
-						alert("Hello");
-						
 						Parse.User.logIn(document.getElementById("username").value, document.getElementById("password").value, {
 							success: function(user) {
 								window.location.replace("index.php");
