@@ -78,13 +78,16 @@
 				}
 			</script>
 			
-			<h1 class="text-center">&middot; Account &middot;</h1>
+			<h1>Account</h1>
 			
 			<p>Name: Charles Fries <a href="#">(Edit)</a></p>
 			<p>Email: charliefries@icloud.com <a href="#">(Edit)</a></p>
 			<p>Username: charlesfries <a href="#">(Edit)</a></p>
 			<p>Password: <a href="#">Change</a></p>
 			
+			<a class="btn btn-default btn-xs" href="#" role="button">Sign Out</a>
+			
+			<br><br>
 			
 			<a class="btn btn-danger btn-xs" href="#" role="button">Delete Account</a>
 			

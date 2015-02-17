@@ -91,7 +91,7 @@
 			</script>
 			
 			<!-- Title -->
-			<h1 class="text-center">&middot; Collection &middot;</h1>
+			<h1>Collection</h1>
 			
 			<!-- Add -->
 			<button type="button" class="btn btn-success">Add</button>
