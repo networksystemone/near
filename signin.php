@@ -105,7 +105,7 @@
 							<div class="form-group">
 								<input type="password" class="form-control" id="password" placeholder="Password">
 							</div>
-							<button type="button" class="btn btn-success">Sign In</button>
+							<button type="button" class="btn btn-success" onclick="signIn()">Sign In</button>
 						</form>
 					</div>
 					<div class="col-md-4">
