@@ -132,7 +132,7 @@
 					<div class="btn-group">
 						<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Sort <span class="caret"></span></button>
 						<ul class="dropdown-menu" role="menu">
-							<li><a href="#">Added</a></li>
+							<li class="active"><a href="#">Added</a></li>
 							<li><a href="#">Album</a></li>
 							<li><a href="#">Artist</a></li>
 							<li><a href="#">Track</a></li>
