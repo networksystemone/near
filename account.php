@@ -28,6 +28,10 @@
 	</head>
 	<body>
 		
+		<script>
+			Parse.initialize("uH37tzThA3MpgQL4KQ7fOr5OzkXGpvTxr3Zk4Kbu", "3f80eW7OWD4U8h7URD4iYdQ0TvKHSgIha1AahgHq");
+		</script>
+		
 		<nav class="navbar navbar-inverse navbar-fixed-top">
 			<div class="container">
 				<div class="navbar-header">
@@ -71,8 +75,6 @@
 		<div class="container">
 			
 			<script>
-				Parse.initialize("uH37tzThA3MpgQL4KQ7fOr5OzkXGpvTxr3Zk4Kbu", "3f80eW7OWD4U8h7URD4iYdQ0TvKHSgIha1AahgHq");
-				
 				// Redirect
 				if (!Parse.User.current()) {
 					window.location.replace("signin.php");
