@@ -85,7 +85,14 @@
 			<p>Username: charlesfries <a href="#">(Edit)</a></p>
 			<p>Password: <a href="#">Change</a></p>
 			
-			<a class="btn btn-default btn-xs" href="#" role="button">Sign Out</a>
+			<button class="btn btn-default" type="submit" onclick="signOut()">Sign Out</button>
+			
+			<script>
+				function signOut() {
+					Parse.User.logOut();
+					window.location.replace("index.php");
+				}
+			</script>
 			
 			<br><br>
 			
