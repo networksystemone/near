@@ -120,7 +120,6 @@
 					
 					function signUp() {
 						
-						
 						var user = new Parse.User();
 						user.set("name", document.getElementById("name").value);
 						user.set("email", document.getElementById("email").value);
@@ -129,7 +128,7 @@
 						
 						user.signUp(null, {
 							success: function(user) {
-								alert("You have successfully signed up. Please check your email to verify your email account");
+								alert("You have successfully signed up. Please check your email to verify your email account.");
 							},
 							error: function(user, error) {
 								alert("Error: " + error.code + " " + error.message);
