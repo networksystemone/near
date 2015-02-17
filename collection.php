@@ -14,8 +14,8 @@
 		
 		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 		<!--[if lt IE 9]>
-		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+		<script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 		<![endif]-->
 		
 		<style>
@@ -36,17 +36,17 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" href="index.html"><span class="glyphicon glyphicon-fire" aria-hidden="true"></span> Near</a>
+					<a class="navbar-brand" href="index.php"><span class="glyphicon glyphicon-fire" aria-hidden="true"></span> Near</a>
 				</div>
 				<div id="navbar" class="collapse navbar-collapse">
 					<ul class="nav navbar-nav">
-						<li class="active"><a href="#">Collection</a></li>
-						<li><a href="discover.html">Discover</a></li>
+						<li class="active"><a href="collection.php">Collection</a></li>
+						<li><a href="discover.php">Discover</a></li>
 					</ul>
 					
 					<ul class="nav navbar-nav navbar-right">
-						<li><a href="signin.html">Sign In</a></li>
-						<li><a href="signup.html">Sign Up</a></li>
+						<li><a href="signin.php">Sign In</a></li>
+						<li><a href="signup.php">Sign Up</a></li>
 					</ul>
 				</div>
 			</div>
@@ -131,7 +131,7 @@
 			<br>
 	  
 			<ol class="breadcrumb">
-				<li><a href="index.html">Home</a></li>
+				<li><a href="index.php">Home</a></li>
 				<li class="active">Collection</li>
 			</ol>
 
@@ -142,8 +142,7 @@
 			</footer>
 		</div>
 		
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 		<script src="bootstrap/js/bootstrap.min.js"></script>
-		<script src="bootstrap/js/ie10-viewport-bug-workaround.js"></script>
 	</body>
 </html>

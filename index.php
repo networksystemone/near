@@ -35,17 +35,17 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" href="index.html"><span class="glyphicon glyphicon-fire" aria-hidden="true"></span> Near</a>
+					<a class="navbar-brand" href="index.php"><span class="glyphicon glyphicon-fire" aria-hidden="true"></span> Near</a>
 				</div>
 				<div id="navbar" class="collapse navbar-collapse">
 					<ul class="nav navbar-nav">
-						<li><a href="collection.html">Collection</a></li>
-						<li><a href="discover.html">Discover</a></li>
+						<li><a href="collection.php">Collection</a></li>
+						<li><a href="discover.php">Discover</a></li>
 					</ul>
 					
 					<ul class="nav navbar-nav navbar-right">
-						<li><a href="signin.html">Sign In</a></li>
-						<li><a href="signup.html">Sign Up</a></li>
+						<li><a href="signin.php">Sign In</a></li>
+						<li><a href="signup.php">Sign Up</a></li>
 						<li class="dropdown">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">More <span class="caret"></span></a>
 							<ul class="dropdown-menu" role="menu">
@@ -105,7 +105,7 @@
 			</footer>
 		</div>
 		
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 		<script src="bootstrap/js/bootstrap.min.js"></script>
 		<script src="bootstrap/js/ie10-viewport-bug-workaround.js"></script>
 	</body>
