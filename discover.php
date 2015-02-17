@@ -70,17 +70,23 @@
 			<h1 class="text-center">&middot; Discover &middot;</h1>
 			
 			<br>
-			<!-- Single button -->
+			
 			<div class="btn-group">
 				<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Trending <span class="caret"></span></button>
 				<ul class="dropdown-menu" role="menu">
-					<li><a href="#">Trending</a></li>
+					<li class="active"><a href="#">Trending</a></li>
 					<li><a href="#">Recommendations</a></li>
 					<li class="divider"></li>
-					<li><a href="#">Country</a></li>
-					<li><a href="#">Electronic</a></li>
-					<li><a href="#">Hip-Hop/Rap</a></li>
+					<li><a href="#">Alternative Rock</a></li>
+					<li><a href="#">Dance & EDM</a></li>
+					<li><a href="#">Dubstep</a></li>
+					<li><a href="#">Hip-Hop & Rap</a></li>
 					<li><a href="#">House</a></li>
+					<li><a href="#">Indie</a></li>
+					<li><a href="#">Metal</a></li>
+					<li><a href="#">Pop</a></li>
+					<li><a href="#">R&B & Soul</a></li>
+					<li><a href="#">Reggae</a></li>
 					<li><a href="#">Rock</a></li>
 				</ul>
 			</div>
