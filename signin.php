@@ -71,10 +71,10 @@
 				
 				Parse.User.logIn("charlesfries", "password", {
 					success: function(user) {
-						
+						alert("Success");
 					},
 					error: function(user, error) {
-						
+						alert("Failure");
 					}
 				});
 			</script>
