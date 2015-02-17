@@ -6,7 +6,6 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="description" content="">
 		<meta name="author" content="">
-		<!--<link rel="icon" href="../../favicon.ico">-->
 		
 		<title>Sign In - Near</title>
 		
@@ -67,18 +66,9 @@
 		
 		<div class="container">
 			
-			<script src="//www.parsecdn.com/js/parse-1.3.4.min.js"></script>
-			
 			<script>
 				Parse.initialize("uH37tzThA3MpgQL4KQ7fOr5OzkXGpvTxr3Zk4Kbu", "3f80eW7OWD4U8h7URD4iYdQ0TvKHSgIha1AahgHq");
 				
-				var TestObject = Parse.Object.extend("TestObject");
-var testObject = new TestObject();
-testObject.save({foo: "bar"}).then(function(object) {
-  alert("yay! it worked");
-});
-			
-/*
 				var user = new Parse.User();
 				user.set("username", "my name");
 				user.set("password", "my pass");
@@ -109,7 +99,7 @@ testObject.save({foo: "bar"}).then(function(object) {
 					<div class="col-md-4">
 						<form>
 							<div class="form-group">
-								<input type="text" class="form-control" id="name" placeholder="Username">
+								<input type="text" class="form-control" id="name" placeholder="Username" autofocus>
 							</div>
 							<div class="form-group">
 								<input type="password" class="form-control" id="password" placeholder="Password">
@@ -138,5 +128,6 @@ testObject.save({foo: "bar"}).then(function(object) {
 		
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 		<script src="bootstrap/js/bootstrap.min.js"></script>
+		<script src="//www.parsecdn.com/js/parse-1.3.4.min.js"></script>
 	</body>
 </html>

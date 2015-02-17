@@ -83,7 +83,7 @@
 					<div class="col-md-4">
 						<form>
 							<div class="form-group">
-								<input type="text" class="form-control" id="name" placeholder="Name">
+								<input type="text" class="form-control" id="name" placeholder="Name" autofocus>
 							</div>
 							<div class="form-group">
 								<input type="text" class="form-control" id="email" placeholder="Email">
