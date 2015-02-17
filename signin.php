@@ -69,23 +69,14 @@
 			<script>
 				Parse.initialize("uH37tzThA3MpgQL4KQ7fOr5OzkXGpvTxr3Zk4Kbu", "3f80eW7OWD4U8h7URD4iYdQ0TvKHSgIha1AahgHq");
 				
-				var user = new Parse.User();
-				user.set("username", "my name");
-				user.set("password", "my pass");
-				user.set("email", "email@example.com");
-				 
-				// other fields can be set just like with Parse.Object
-				user.set("phone", "415-392-0202");
-				 
-				user.signUp(null, {
-				  success: function(user) {
-				    // Hooray! Let them use the app now.
-				  },
-				  error: function(user, error) {
-				    // Show the error message somewhere and let the user try again.
-				    alert("Error: " + error.code + " " + error.message);
-				  }
-				});*/
+				Parse.User.logIn("charlesfries", "password", {
+					success: function(user) {
+						
+					},
+					error: function(user, error) {
+						
+					}
+				});
 			</script>
 			
 			<center>

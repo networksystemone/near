@@ -67,6 +67,17 @@
 		
 		<div class="container">
 			
+			<script>
+				Parse.initialize("uH37tzThA3MpgQL4KQ7fOr5OzkXGpvTxr3Zk4Kbu", "3f80eW7OWD4U8h7URD4iYdQ0TvKHSgIha1AahgHq");
+				
+				var currentUser = Parse.User.current();
+				if (currentUser) {
+				    alert("You're signed in.");
+				} else {
+				    window.location.replace("signin.php");
+				}
+			</script>
+			
 			<h1 class="text-center">&middot; Collection &middot;</h1>
 			
 			

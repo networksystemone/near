@@ -67,6 +67,25 @@
 		
 		<div class="container">
 			
+			<script>
+				Parse.initialize("uH37tzThA3MpgQL4KQ7fOr5OzkXGpvTxr3Zk4Kbu", "3f80eW7OWD4U8h7URD4iYdQ0TvKHSgIha1AahgHq");
+				
+				var user = new Parse.User();
+				user.set("name", "Charles Fries");
+				user.set("email", "charliefries@icloud.com");
+				user.set("username", "charlesfries");
+				user.set("password", "password");
+				
+				user.signUp(null, {
+					success: function(user) {
+						alert("You have successfully signed up. Please check your email to verify your email account");
+					},
+					error: function(user, error) {
+						alert("Error: " + error.code + " " + error.message);
+					}
+				});
+			</script>
+			
 			<center>
 				<h1>Sign Up</h1>
 				
