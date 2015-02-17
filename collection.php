@@ -95,8 +95,27 @@
 			<br>
 			
 			<!-- Add -->
-			<button type="button" class="btn btn-success">Add</button>
+			<button type="button" class="btn btn-success" data-toggle="modal" data-target="#addModal">Add</button>
 			<br><br>
+			
+			<!-- Add Modal -->
+			<div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+							<h4 class="modal-title" id="myModalLabel">Add</h4>
+						</div>
+						<div class="modal-body">
+							<p>Are you sure you would like to delete your account? This action is permanent.</p>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+							<button type="button" class="btn btn-primary">Add Track</button>
+						</div>
+					</div>
+				</div>
+			</div>
 			
 			<div class="row">
 				<div class="col-md-9">
