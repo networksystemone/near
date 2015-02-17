@@ -51,6 +51,8 @@
 						<script>
 							Parse.initialize("uH37tzThA3MpgQL4KQ7fOr5OzkXGpvTxr3Zk4Kbu", "3f80eW7OWD4U8h7URD4iYdQ0TvKHSgIha1AahgHq");
 							
+							document.write("<li><a href="account.php">Charles Fries</a></li>");
+							
 							if (!Parse.User.current()) {
 								document.write("<li><a href="signin.php">Sign In</a></li>");
 								document.write("<li><a href="signup.php">Sign Up</a></li>");
