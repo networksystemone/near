@@ -100,7 +100,7 @@
 					<div class="col-md-4">
 						<form>
 							<div class="form-group">
-								<input type="text" class="form-control" id="name" placeholder="Username" autofocus>
+								<input type="text" class="form-control" id="username" placeholder="Username" autofocus>
 							</div>
 							<div class="form-group">
 								<input type="password" class="form-control" id="password" placeholder="Password">
