@@ -47,6 +47,19 @@
 					<ul class="nav navbar-nav navbar-right">
 						<li><a href="signin.php">Sign In</a></li>
 						<li class="active"><a href="signup.php">Sign Up</a></li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">More <span class="caret"></span></a>
+							<ul class="dropdown-menu" role="menu">
+								<li><a href="#">Company</a></li>
+								<li class="divider"></li>
+								<li><a href="#">Downloads</a></li>
+								<li><a href="#">Blog</a></li>
+								<li><a href="#">Careers</a></li>
+								<li class="divider"></li>
+								<li><a href="#">Forums</a></li>
+								<li><a href="#">Help Center</a></li>
+							</ul>
+						</li>
 					</ul>
 				</div>
 			</div>
