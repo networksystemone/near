@@ -104,6 +104,7 @@
 					<p><a class="btn btn-default" href="#" role="button">Learn more &raquo;</a></p>
 				</div>
 			</div>
+			<br>
 			
 			<!-- Breadcrumb -->
 			<ol class="breadcrumb">

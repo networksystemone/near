@@ -79,7 +79,7 @@
 		<div class="container">
 			
 			<!-- Title -->
-			<h1 class="text-center">&middot; Discover &middot;</h1>
+			<h1>Discover</h1>
 			<br>
 			
 			<div class="btn-group">

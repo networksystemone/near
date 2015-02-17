@@ -92,6 +92,7 @@
 			
 			<!-- Title -->
 			<h1>Collection</h1>
+			<br>
 			
 			<!-- Add -->
 			<button type="button" class="btn btn-success">Add</button>
