@@ -68,7 +68,33 @@
 		
 		<div class="container">
 			
-			
+			<script>
+				Parse.initialize("uH37tzThA3MpgQL4KQ7fOr5OzkXGpvTxr3Zk4Kbu", "3f80eW7OWD4U8h7URD4iYdQ0TvKHSgIha1AahgHq");
+				
+				// Redirect
+				if (Parse.User.current()) {
+					window.location.replace("index.php");
+				} else {
+					
+					function signUp() {
+						
+						var user = new Parse.User();
+						user.set("name", document.getElementById("name").value);
+						user.set("email", document.getElementById("email").value);
+						user.set("username", document.getElementById("username").value);
+						user.set("password", document.getElementById("password").value);
+						
+						user.signUp(null, {
+							success: function(user) {
+								alert("You have successfully signed up. Please check your email to verify your email account.");
+							},
+							error: function(user, error) {
+								alert("Error: " + error.code + " " + error.message);
+							}
+						});
+					}
+				}
+			</script>
 			
 			<center>
 				<h1>Sign Up</h1>
@@ -102,41 +128,13 @@
 									<input type="checkbox"> Agree to Near terms of service
 								</label>
 							</div>
-							<button type="submit" class="btn btn-success" onclick="signUp()">Sign Up</button>
+							<button type="button" class="btn btn-success" onclick="signUp()">Sign Up</button>
 						</form>
 					</div>
 					<div class="col-md-4">
 					</div>
 				</div>
 			</center>
-			
-			<script>
-				Parse.initialize("uH37tzThA3MpgQL4KQ7fOr5OzkXGpvTxr3Zk4Kbu", "3f80eW7OWD4U8h7URD4iYdQ0TvKHSgIha1AahgHq");
-				
-				// Redirect
-				if (Parse.User.current()) {
-					window.location.replace("index.php");
-				} else {
-					
-					function signUp() {
-						
-						var user = new Parse.User();
-						user.set("name", document.getElementById("name").value);
-						user.set("email", document.getElementById("email").value);
-						user.set("username", document.getElementById("username").value);
-						user.set("password", document.getElementById("password").value);
-						
-						user.signUp(null, {
-							success: function(user) {
-								alert("You have successfully signed up. Please check your email to verify your email account.");
-							},
-							error: function(user, error) {
-								alert("Error: " + error.code + " " + error.message);
-							}
-						});
-					}
-				}
-				</script>
 			
 			<br>
 			
