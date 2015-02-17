@@ -53,7 +53,7 @@
 								document.write('<li><a href="signin.php">Sign In</a></li>');
 								document.write('<li><a href="signup.php">Sign Up</a></li>');
 							} else {
-								document.write('<li><a href="account.php">Charles Fries</a></li>');
+								document.write('<li><a href="account.php">'+ Parse.User.current().get("name") + '</a></li>');
 							}
 						</script>
 						

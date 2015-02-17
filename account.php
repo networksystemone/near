@@ -46,7 +46,10 @@
 					</ul>
 					
 					<ul class="nav navbar-nav navbar-right">
-						<li class="active"><a href="account.php">Charles Fries</a></li>
+						<script>
+							document.write('<li><a href="account.php">'+ Parse.User.current().get("name") + '</a></li>');
+						</script>
+						
 						<li class="dropdown">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">More <span class="caret"></span></a>
 							<ul class="dropdown-menu" role="menu">
