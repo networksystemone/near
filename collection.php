@@ -203,7 +203,7 @@
 					
 					<form>
 						<div class="form-group">
-							<input type="text" class="form-control" id="exampleInputName2" placeholder="Filter">
+							<input type="text" class="form-control" id="filter" placeholder="Filter">
 						</div>
 					</form>
 					

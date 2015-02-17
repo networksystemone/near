@@ -81,7 +81,7 @@
 			<div class="container">
 				<h1>Once place for all your music.</h1>
 				<p>Consolidate your music libraries with Near. Simply link SoundCloud, Spotify, YouTube, or other tracks to Near to keep all your audio in one convenient location.</p>
-				<p><a class="btn btn-warning btn-lg" href="#" role="button">Get started &raquo;</a></p>
+				<p><a class="btn btn-warning btn-lg" href="signup.php" role="button">Get started &raquo;</a></p>
 			</div>
 		</div>
 		

@@ -76,20 +76,24 @@
 					window.location.replace("index.php");
 				} else {
 					
-					var user = new Parse.User();
-					user.set("name", "Charles Fries");
-					user.set("email", "charliefries@icloud.com");
-					user.set("username", "charlesfries");
-					user.set("password", "password");
-					
-					user.signUp(null, {
-						success: function(user) {
-							alert("You have successfully signed up. Please check your email to verify your email account");
-						},
-						error: function(user, error) {
-							alert("Error: " + error.code + " " + error.message);
-						}
-					});
+					function signUp() {
+						
+						
+						var user = new Parse.User();
+						user.set("name", document.getElementById("name").value);
+						user.set("email", document.getElementById("email").value);
+						user.set("username", document.getElementById("username").value);
+						user.set("password", document.getElementById("password").value);
+						
+						user.signUp(null, {
+							success: function(user) {
+								alert("You have successfully signed up. Please check your email to verify your email account");
+							},
+							error: function(user, error) {
+								alert("Error: " + error.code + " " + error.message);
+							}
+						});
+					}
 				}
 			</script>
 			
@@ -125,7 +129,7 @@
 									<input type="checkbox"> Agree to Near terms of service
 								</label>
 							</div>
-							<button type="submit" class="btn btn-success">Sign Up</button>
+							<button type="submit" class="btn btn-success" onclick="signUp()">Sign Up</button>
 						</form>
 					</div>
 					<div class="col-md-4">
