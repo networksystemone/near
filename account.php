@@ -47,7 +47,6 @@
 					
 					<ul class="nav navbar-nav navbar-right">
 						<li class="active"><a href="account.php">Charles Fries</a></li>
-						<li><a href="signout.php">Sign Out</a></li>
 						<li class="dropdown">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">More <span class="caret"></span></a>
 							<ul class="dropdown-menu" role="menu">
