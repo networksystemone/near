@@ -42,6 +42,7 @@
 					<ul class="nav navbar-nav">
 						<li><a href="collection.html">Collection</a></li>
 						<li><a href="discover.html">Discover</a></li>
+						<li><a href="downloads.html">Downloads</a></li>
 					</ul>
 					
 					<ul class="nav navbar-nav navbar-right">
@@ -53,6 +54,37 @@
 		</nav>
 		
 		<div class="container">
+			
+			<script src="//www.parsecdn.com/js/parse-1.3.4.min.js"></script>
+			
+			<script>
+				Parse.initialize("uH37tzThA3MpgQL4KQ7fOr5OzkXGpvTxr3Zk4Kbu", "3f80eW7OWD4U8h7URD4iYdQ0TvKHSgIha1AahgHq");
+				
+				var TestObject = Parse.Object.extend("TestObject");
+var testObject = new TestObject();
+testObject.save({foo: "bar"}).then(function(object) {
+  alert("yay! it worked");
+});
+			
+/*
+				var user = new Parse.User();
+				user.set("username", "my name");
+				user.set("password", "my pass");
+				user.set("email", "email@example.com");
+				 
+				// other fields can be set just like with Parse.Object
+				user.set("phone", "415-392-0202");
+				 
+				user.signUp(null, {
+				  success: function(user) {
+				    // Hooray! Let them use the app now.
+				  },
+				  error: function(user, error) {
+				    // Show the error message somewhere and let the user try again.
+				    alert("Error: " + error.code + " " + error.message);
+				  }
+				});*/
+			</script>
 			
 			<center>
 				<h1>Sign In</h1>
@@ -82,7 +114,7 @@
 			
 			<ol class="breadcrumb">
 				<li><a href="index.html">Home</a></li>
-				<li class="active">Discover</li>
+				<li class="active">Sign In</li>
 			</ol>
 
 			<hr>
