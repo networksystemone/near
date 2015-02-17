@@ -47,6 +47,16 @@
 					</ul>
 					
 					<ul class="nav navbar-nav navbar-right">
+						
+						<script>
+							if (!Parse.User.current()) {
+								document.write("<li><a href="signin.php">Sign In</a></li>");
+								document.write("<li><a href="signup.php">Sign Up</a></li>");
+							} else {
+								document.write("<li><a href="account.php">Charles Fries</a></li>");
+							}
+						</script>
+						
 						<li><a href="signin.php">Sign In</a></li>
 						<li><a href="signup.php">Sign Up</a></li>
 						<li class="dropdown">
