@@ -76,14 +76,16 @@
 					window.location.replace("index.php");
 				} else {
 					
-					Parse.User.logIn("charlesfries", "password", {
+					function signIn() {
+						Parse.User.logIn(document.getElementById("username").value, document.getElementById("password").value, {
 						success: function(user) {
-							alert("Success");
+							window.location.replace("index.php");
 						},
 						error: function(user, error) {
 							alert("Failure");
 						}
 					});
+					}
 				}
 			</script>
 			
@@ -103,7 +105,7 @@
 							<div class="form-group">
 								<input type="password" class="form-control" id="password" placeholder="Password">
 							</div>
-							<button type="submit" class="btn btn-success">Sign In</button>
+							<button type="button" class="btn btn-success">Sign In</button>
 						</form>
 					</div>
 					<div class="col-md-4">

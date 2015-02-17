@@ -87,6 +87,7 @@
 						user.signUp(null, {
 							success: function(user) {
 								alert("You have successfully signed up. Please check your email to verify your email account.");
+								window.location.replace("index.php");
 							},
 							error: function(user, error) {
 								alert("Error: " + error.code + " " + error.message);
@@ -97,9 +98,9 @@
 			</script>
 			
 			<center>
+				
+				<!-- Title -->
 				<h1>Sign Up</h1>
-				
-				
 				<br>
 				
 				<p>Near is free and always will be.</p>
@@ -143,8 +144,8 @@
 				<li class="active">Sign Up</li>
 			</ol>
 
+			<!-- Footer -->
 			<hr>
-
 			<footer>
 				<p>&copy; 2015 Figure Inc.</p>
 			</footer>
