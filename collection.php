@@ -60,7 +60,6 @@
 							}
 						</script>
 						
-						<div id="mydiv"></div>
 						
 						<li class="dropdown">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">More <span class="caret"></span></a>
