@@ -51,7 +51,7 @@
 						<script>
 							Parse.initialize("uH37tzThA3MpgQL4KQ7fOr5OzkXGpvTxr3Zk4Kbu", "3f80eW7OWD4U8h7URD4iYdQ0TvKHSgIha1AahgHq");
 							
-							if (Parse.User.current()) {
+							if (!Parse.User.current()) {
 								document.write("<li><a href="signin.php">Sign In</a></li>");
 								document.write("<li><a href="signup.php">Sign Up</a></li>");
 							} else {
@@ -59,8 +59,6 @@
 							}
 						</script>
 						
-						<li><a href="signin.php">Sign In</a></li>
-						<li><a href="signup.php">Sign Up</a></li>
 						<li class="dropdown">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">More <span class="caret"></span></a>
 							<ul class="dropdown-menu" role="menu">
