@@ -11,6 +11,8 @@
 		
 		<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 		
+		<script src="//www.parsecdn.com/js/parse-1.3.4.min.js"></script>
+		
 		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 		<!--[if lt IE 9]>
 		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -26,6 +28,7 @@
 	</head>
 	<body>
 		
+		<!-- Navigation -->
 		<nav class="navbar navbar-inverse navbar-fixed-top">
 			<div class="container">
 				<div class="navbar-header">
@@ -64,7 +67,7 @@
 			</div>
 		</nav>
 		
-		<!-- Main jumbotron for a primary marketing message or call to action -->
+		<!-- Jumbotron -->
 		<div class="jumbotron">
 			<div class="container">
 				<h1>Once place for all your music.</h1>
@@ -73,6 +76,7 @@
 			</div>
 		</div>
 		
+		<!-- Content -->
 		<div class="container">
 			<div class="row">
 				<div class="col-md-4">
@@ -91,15 +95,15 @@
 					<p><a class="btn btn-default" href="#" role="button">Learn more &raquo;</a></p>
 				</div>
 			</div>
-			
 			<br>
 			
+			<!-- Breadcrumb -->
 			<ol class="breadcrumb">
 				<li class="active">Home</li>
 			</ol>
-
+			
+			<!-- Footer -->
 			<hr>
-
 			<footer>
 				<p>&copy; 2015 Figure Inc.</p>
 			</footer>
@@ -107,6 +111,5 @@
 		
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 		<script src="bootstrap/js/bootstrap.min.js"></script>
-		<script src="bootstrap/js/ie10-viewport-bug-workaround.js"></script>
 	</body>
 </html>

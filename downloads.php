@@ -6,11 +6,12 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="description" content="">
 		<meta name="author" content="">
-		<!--<link rel="icon" href="../../favicon.ico">-->
 		
 		<title>Downloads - Near</title>
 		
 		<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		
+		<script src="//www.parsecdn.com/js/parse-1.3.4.min.js"></script>
 		
 		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 		<!--[if lt IE 9]>
@@ -23,7 +24,6 @@
 				padding-top: 50px;
 			}
 		</style>
-		
 	</head>
 	<body>
 		
@@ -65,19 +65,21 @@
 			</div>
 		</nav>
 		
+		<!-- Content -->
 		<div class="container">
 			
+			<!-- Title -->
 			<h1>Downloads</h1>
-			
 			<br>
 			
+			<!-- Breadcrumb -->
 			<ol class="breadcrumb">
 				<li><a href="index.php">Home</a></li>
 				<li class="active">Discover</li>
 			</ol>
-
+			
+			<!-- Footer -->
 			<hr>
-
 			<footer>
 				<p>&copy; 2015 Figure Inc.</p>
 			</footer>

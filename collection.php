@@ -6,7 +6,6 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="description" content="">
 		<meta name="author" content="">
-		<!--<link rel="icon" href="../../favicon.ico">-->
 		
 		<title>Collection - Near</title>
 		
@@ -29,6 +28,7 @@
 	</head>
 	<body>
 		
+		<!-- Navigation -->
 		<nav class="navbar navbar-inverse navbar-fixed-top">
 			<div class="container">
 				<div class="navbar-header">
@@ -67,6 +67,7 @@
 			</div>
 		</nav>
 		
+		<!-- Content -->
 		<div class="container">
 			
 			<script>
@@ -80,17 +81,17 @@
 				}
 			</script>
 			
+			<!-- Title -->
 			<h1 class="text-center">&middot; Collection &middot;</h1>
 			
-			
+			<!-- Add -->
 			<button type="button" class="btn btn-success">Add</button>
-			
-			<br>
-			
-			<br>
+			<br><br>
 			
 			<div class="row">
 				<div class="col-md-9">
+					
+					<!-- Table -->
 					<table class="table table-striped table-condensed">
 						<thead>
 							<tr>
@@ -262,15 +263,14 @@
 				</div>
 			</div>
 			
-			<br>
-	  
+			<!-- Breadcrumb -->
 			<ol class="breadcrumb">
 				<li><a href="index.php">Home</a></li>
 				<li class="active">Collection</li>
 			</ol>
-
+			
+			<!-- Footer -->
 			<hr>
-
 			<footer>
 				<p>&copy; 2015 Figure Inc.</p>
 			</footer>
