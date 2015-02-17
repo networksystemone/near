@@ -168,5 +168,6 @@
 		
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 		<script src="bootstrap/js/bootstrap.min.js"></script>
+		<script src="//www.parsecdn.com/js/parse-1.3.4.min.js"></script>
 	</body>
 </html>
