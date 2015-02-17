@@ -101,18 +101,18 @@
 								<th>Time</th>
 								<th>Album</th>
 								<th>Added</th>
-								<th>Link</th>
+								<th></th>
 							</tr>
 						</thead>
 						<tbody>
 							<tr>
-								<td><a href="#" target="blank"><span class="glyphicon glyphicon-play" aria-hidden="true"></span></a> &nbsp;<a href="#" target="blank"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a> &nbsp;<a href="#" target="blank"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a></td>
+								<td><a href="#" target="blank"><span class="glyphicon glyphicon-play" aria-hidden="true"></span></a></a></td>
 								<td>The Blacker the Berry</td>
 								<td>Kendrick Lamar</td>
 								<td>5:32</td>
 								<td>The Blacker the Berry</td>
 								<td>1 day ago</td>
-								<td>#</td>
+								<td><a href="#" target="blank"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a> &nbsp;<a href="#" target="blank"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></td>
 							</tr>
 							<tr>
 								<td><a href="#" target="blank"><span class="glyphicon glyphicon-play" aria-hidden="true"></span></a> &nbsp;<a href="#" target="blank"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a> &nbsp;<a href="#" target="blank"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a></td>
