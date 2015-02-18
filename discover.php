@@ -94,10 +94,10 @@
 					</div>
 				</div>
 				<div class="item">
-					<img src="//placehold.it/1400x500">
+					<img src="drake-2.jpeg">
 					<div class="carousel-caption">
-						<h3>Caption Text</h3>
-						<p>Subtitle</p>
+						<h3>Drake Is Getting "Rich Off A Mixtape" for the Second Time</h3>
+						<p>If You're Reading This It's Too Late is even breaking Spotify records.</p>
 					</div>
 				</div>
 				<div class="item">
