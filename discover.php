@@ -164,36 +164,36 @@
 					<div class="media">
 						<div class="media-left">
 							<a href="#">
-								<img class="media-object" data-src="//placehold.it/64x64">
+								<img class="media-object" src="//placehold.it/64x64">
 							</a>
 						</div>
 						<div class="media-body">
 							<h4 class="media-heading">Charles Fries</h4>
-							Cras sit amet nibh libero
+							<span class="glyphicon glyphicon-user" aria-hidden="true"></span> 5,819
 						</div>
 					</div>
 					
 					<div class="media">
 						<div class="media-left">
 							<a href="#">
-								<img class="media-object" data-src="//placehold.it/64x64">
+								<img class="media-object" src="//placehold.it/64x64">
 							</a>
 						</div>
 						<div class="media-body">
-							<h4 class="media-heading">Media heading</h4>
-							Cras sit amet nibh libero
+							<h4 class="media-heading">Kendrick Lamar</h4>
+							<span class="glyphicon glyphicon-user" aria-hidden="true"></span> 892,672
 						</div>
 					</div>
 					
 					<div class="media">
 						<div class="media-left">
 							<a href="#">
-								<img class="media-object" data-src="//placehold.it/64x64">
+								<img class="media-object" src="//placehold.it/64x64">
 							</a>
 						</div>
 						<div class="media-body">
-							<h4 class="media-heading">Media heading</h4>
-							Cras sit amet nibh libero
+							<h4 class="media-heading">Logic</h4>
+							<span class="glyphicon glyphicon-user" aria-hidden="true"></span> 102,124
 						</div>
 					</div>
 					
