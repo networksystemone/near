@@ -96,7 +96,7 @@
 				<div class="item">
 					<img src="tyga.jpeg">
 					<div class="carousel-caption">
-						<h3>Chris Brown And Tyga Hope You "Remember" This New Fan of a Fan Single</h3>
+						<h3>Chris Brown and Tyga Hope You "Remember" This New Single</h3>
 						<p>Listen to "Remember Me" as you prep for Fan Of A Fan 2.</p>
 					</div>
 				</div>
@@ -104,7 +104,7 @@
 					<img src="drake.jpg">
 					<div class="carousel-caption">
 						<h3>If You're Reading This It's Too Late</h3>
-						<p>Drake drops his newest mixtape on iTunes. <a href="#">More</a></p>
+						<p>Drake drops his newest mixtape on iTunes.</p>
 					</div>
 				</div>
 			</div>
@@ -160,6 +160,18 @@
 				</div>
 				<div class="col-md-3">
 					<h4>Who to Follow</h4>
+					
+					<div class="media">
+						<div class="media-left">
+							<a href="#">
+								<img class="media-object" data-src="//placehold.it/64x64">
+							</a>
+						</div>
+						<div class="media-body">
+							<h4 class="media-heading">Media heading</h4>
+							Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+						</div>
+					</div>
 				</div>
 			</div>
 			
