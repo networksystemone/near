@@ -192,10 +192,36 @@
 							</a>
 						</div>
 						<div class="media-body">
-							<h4 class="media-heading">Logic</h4>
-							<span class="glyphicon glyphicon-user" aria-hidden="true"></span> 102,124
+							<h4 class="media-heading">J. Cole</h4>
+							<span class="glyphicon glyphicon-user" aria-hidden="true"></span> 152,124
 						</div>
 					</div>
+					
+					<div class="media">
+						<div class="media-left">
+							<a href="#">
+								<img class="media-object" src="//placehold.it/64x64">
+							</a>
+						</div>
+						<div class="media-body">
+							<h4 class="media-heading">Ab-Soul</h4>
+							<span class="glyphicon glyphicon-user" aria-hidden="true"></span> 142,124
+						</div>
+					</div>
+					
+					<div class="media">
+						<div class="media-left">
+							<a href="#">
+								<img class="media-object" src="//placehold.it/64x64">
+							</a>
+						</div>
+						<div class="media-body">
+							<h4 class="media-heading">Childish Gambino</h4>
+							<span class="glyphicon glyphicon-user" aria-hidden="true"></span> 202,124
+						</div>
+					</div>
+					
+					
 					
 				</div>
 			</div>
