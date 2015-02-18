@@ -89,8 +89,8 @@
 				<div class="item active">
 					<img src="//placehold.it/1400x500">
 					<div class="carousel-caption">
-						<h3>Caption Text</h3>
-						<p>Subtitle</p>
+						<h3>If You're Reading This It's Too Late</h3>
+						<p>Drake drops his newest mixtape on iTunes. <a href="#">More</a></p>
 					</div>
 				</div>
 				<div class="item">
