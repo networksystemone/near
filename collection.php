@@ -119,22 +119,21 @@
 									success: function(results) {
 										for (var i = 0; i < results.length; i++) { 
 											var object = results[i];
-											document.getElementById('myTable').innerHTML += "hello";
-											/*
-											document.write('<tr>');
-											document.write('<td><button type="button" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-play" aria-hidden="true"></span></button></td>');
-											document.write('<td>' + object.get('track') + '</td>');
-											document.write('<td>' + object.get('artist') + '</td>');
-											document.write('<td>' + object.get('time') + '</td>');
-											document.write('<td>' + object.get('album') + '</td>');
-											document.write('<td>1 day ago</td>');
-											document.write('<td>');
-											document.write('<div class="btn-group btn-group-xs" role="group" aria-label="...">');
-											document.write('<button type="button" class="btn btn-default"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></button>');
-											document.write('<button type="button" class="btn btn-default"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>');
-											document.write('</div>');
-											document.write('</td>');
-											document.write('</tr>');*/
+											
+											document.getElementById("myTable").innerHTML += '<tr>'
+											document.getElementById("myTable").innerHTML += '<td><button type="button" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-play" aria-hidden="true"></span></button></td>';
+											document.getElementById("myTable").innerHTML += '<td>' + object.get('track') + '</td>';
+											document.getElementById("myTable").innerHTML += '<td>' + object.get('artist') + '</td>';
+											document.getElementById("myTable").innerHTML += '<td>' + object.get('time') + '</td>';
+											document.getElementById("myTable").innerHTML += '<td>' + object.get('album') + '</td>';
+											document.getElementById("myTable").innerHTML += '<td>1 day ago</td>';
+											document.getElementById("myTable").innerHTML += '<td>';
+											document.getElementById("myTable").innerHTML += '<div class="btn-group btn-group-xs" role="group" aria-label="...">';
+											document.getElementById("myTable").innerHTML += '<button type="button" class="btn btn-default"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></button>';
+											document.getElementById("myTable").innerHTML += '<button type="button" class="btn btn-default"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>';
+											document.getElementById("myTable").innerHTML += '</div>';
+											document.getElementById("myTable").innerHTML += '</td>';
+											document.getElementById("myTable").innerHTML += '</tr>';
 										}
 									},
 									error: function(error) {
