@@ -97,6 +97,19 @@
 			<div class="row">
 				<div class="col-md-9">
 					
+					<script>
+						var GameScore = Parse.Object.extend("Music");
+						var query = new Parse.Query(GameScore);
+						query.get("BYEc59rMXh", {
+							success: function(gameScore) {
+								alert(gameScore.get("track"));
+							},
+							error: function(object, error) {
+							    alert("Unexpected Error");
+							}
+						});
+					</script>
+					
 					<!-- Table -->
 					<table class="table table-hover table-condensed">
 						<thead>
