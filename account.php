@@ -51,7 +51,7 @@
 					
 					<ul class="nav navbar-nav navbar-right">
 						<script>
-							document.write('<li><a href="account.php"><img src="http://placehold.it/18x18" class="profile-image img-circle">'+ Parse.User.current().get("name") + '</a></li>');
+							document.write('<li><a href="account.php"><img src="http://placehold.it/18x18" class="profile-image img-circle"> ' + Parse.User.current().get("name") + '</a></li>');
 						</script>
 						
 						<li class="dropdown">
