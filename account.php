@@ -51,7 +51,7 @@
 					
 					<ul class="nav navbar-nav navbar-right">
 						<script>
-							document.write('<li><a href="account.php"><img src="http://placehold.it/18x18" class="profile-image img-circle"> ' + Parse.User.current().get("name") + '</a></li>');
+							document.write('<li><a href="account.php">' + Parse.User.current().get("name") + '</a></li>');
 						</script>
 						
 						<li class="dropdown">
@@ -86,7 +86,7 @@
 			<h1>Account</h1>
 			
 			<img src="profile.jpg" class="img-thumbnail">
-			<br>
+			<br><br>
 			
 			<p>Name: <script>document.write(Parse.User.current().get("name"));</script> <a href="#">(Edit)</a></p>
 			<p>Email: <script>document.write(Parse.User.current().get("email"));</script> <a href="#">(Edit)</a></p>
