@@ -168,10 +168,35 @@
 							</a>
 						</div>
 						<div class="media-body">
-							<h4 class="media-heading">Media heading</h4>
-							Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+							<h4 class="media-heading">Charles Fries</h4>
+							Cras sit amet nibh libero
 						</div>
 					</div>
+					
+					<div class="media">
+						<div class="media-left">
+							<a href="#">
+								<img class="media-object" data-src="//placehold.it/64x64">
+							</a>
+						</div>
+						<div class="media-body">
+							<h4 class="media-heading">Media heading</h4>
+							Cras sit amet nibh libero
+						</div>
+					</div>
+					
+					<div class="media">
+						<div class="media-left">
+							<a href="#">
+								<img class="media-object" data-src="//placehold.it/64x64">
+							</a>
+						</div>
+						<div class="media-body">
+							<h4 class="media-heading">Media heading</h4>
+							Cras sit amet nibh libero
+						</div>
+					</div>
+					
 				</div>
 			</div>
 			
