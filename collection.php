@@ -99,6 +99,8 @@
 					
 					<!-- Table -->
 					<table class="table table-hover table-condensed">
+						
+						<!-- Table Head -->
 						<thead>
 							<tr>
 								<th></th>
@@ -110,6 +112,8 @@
 								<th></th>
 							</tr>
 						</thead>
+						
+						<!-- Table Body -->
 						<tbody id="myTable">
 							
 							<script>
@@ -149,7 +153,7 @@
 							</div>
 							
 							<!-- Remove Modal -->
-							<div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+							<div class="modal fade" id="removeModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 								<div class="modal-dialog">
 									<div class="modal-content">
 										<div class="modal-header">
