@@ -114,7 +114,7 @@
 							
 							<script>
 								var query = new Parse.Query(Parse.Object.extend("Music"));
-								query.equalTo("user", Parse.User.current().getObjectId());
+								query.equalTo("user", Parse.User.current().id);
 								query.find({
 									success: function(results) {
 										for (var i = 0; i < results.length; i++) { 
@@ -211,7 +211,7 @@
 							<li><a href="#">Track</a></li>
 						</ul>
 					</div>
-					<br>
+					<br><br>
 				</div>
 			</div>
 			
