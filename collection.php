@@ -110,7 +110,7 @@
 								<th></th>
 							</tr>
 						</thead>
-						<tbody>
+						<tbody id="myTable">
 							
 							<script>
 								var query = new Parse.Query(Parse.Object.extend("Music"));
@@ -119,7 +119,7 @@
 									success: function(results) {
 										for (var i = 0; i < results.length; i++) { 
 											var object = results[i];
-											document.write("Hello");
+											document.getElementById('myTable').innerHTML += "hello";
 											/*
 											document.write('<tr>');
 											document.write('<td><button type="button" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-play" aria-hidden="true"></span></button></td>');
