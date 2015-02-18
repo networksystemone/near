@@ -120,7 +120,7 @@
 										for (var i = 0; i < results.length; i++) { 
 											var object = results[i];
 											
-											document.getElementById("myTable").innerHTML += '<tr><td><a role="button" class="btn btn-default btn-xs" href="' + object.get('link') + '" target="blank"><span class="glyphicon glyphicon-play" aria-hidden="true"></span></a></td><td>' + object.get('track') + '</td><td>' + object.get('artist') + '</td><td>' + object.get('time') + '</td><td>' + object.get('album') + '</td><td>1 day ago</td><td><div class="btn-group btn-group-xs" role="group" aria-label="..."><button type="button" class="btn btn-default"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></button><button type="button" class="btn btn-default"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button></div></td></tr>';
+											document.getElementById("myTable").innerHTML += '<tr><td><a role="button" class="btn btn-default btn-xs" href="' + object.get('link') + '" target="blank"><span class="glyphicon glyphicon-play" aria-hidden="true"></span></a></td><td>' + object.get('track') + '</td><td>' + object.get('artist') + '</td><td>' + object.get('time') + '</td><td>' + object.get('album') + '</td><td>1 day ago</td><td><div class="btn-group btn-group-xs" role="group" aria-label="..."><button type="button" class="btn btn-default" data-toggle="modal" data-target="#editModal"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></button><button type="button" class="btn btn-default" data-toggle="modal" data-target="#removeModal"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button></div></td></tr>';
 										}
 									},
 									error: function(error) {
@@ -128,6 +128,44 @@
 									}
 								});
 							</script>
+							
+							<!-- Edit Modal -->
+							<div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+								<div class="modal-dialog">
+									<div class="modal-content">
+										<div class="modal-header">
+											<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+											<h4 class="modal-title" id="myModalLabel">Edit</h4>
+										</div>
+										<div class="modal-body">
+											<p>Edit</p>
+										</div>
+										<div class="modal-footer">
+											<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+											<button type="button" class="btn btn-primary">Save</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							
+							<!-- Remove Modal -->
+							<div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+								<div class="modal-dialog">
+									<div class="modal-content">
+										<div class="modal-header">
+											<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+											<h4 class="modal-title" id="myModalLabel">Remove Track</h4>
+										</div>
+										<div class="modal-body">
+											<p>Are you sure you want to remove this track? This action is irreversible.</p>
+										</div>
+										<div class="modal-footer">
+											<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+											<button type="button" class="btn btn-danger">Remove</button>
+										</div>
+									</div>
+								</div>
+							</div>
 							
 							<!--
 							<tr>
@@ -149,6 +187,10 @@
 					</table>
 				</div>
 				<div class="col-md-3">
+					
+					<!--
+					<button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal">Hello</button>
+					-->
 					
 					<!-- Add -->
 					<button type="button" class="btn btn-success" data-toggle="modal" data-target="#addModal"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Add</button>
