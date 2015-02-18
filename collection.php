@@ -150,7 +150,8 @@
 									success: function(results) {
 										for (var i = 0; i < results.length; i++) { 
 											var object = results[i];
-											
+											document.write("Hello");
+											/*
 											document.write('<tr>');
 											document.write('<td><button type="button" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-play" aria-hidden="true"></span></button></td>');
 											document.write('<td>' + object.get('track') + '</td>');
@@ -164,7 +165,7 @@
 											document.write('<button type="button" class="btn btn-default"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>');
 											document.write('</div>');
 											document.write('</td>');
-											document.write('</tr>');
+											document.write('</tr>');*/
 										}
 									},
 									error: function(error) {
