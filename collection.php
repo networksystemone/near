@@ -120,7 +120,7 @@
 										for (var i = 0; i < results.length; i++) { 
 											var object = results[i];
 											
-											document.getElementById("myTable").innerHTML += '<tr>'
+											document.getElementById("myTable").innerHTML += '<tr>';
 											document.getElementById("myTable").innerHTML += '<td><button type="button" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-play" aria-hidden="true"></span></button></td>';
 											document.getElementById("myTable").innerHTML += '<td>' + object.get('track') + '</td>';
 											document.getElementById("myTable").innerHTML += '<td>' + object.get('artist') + '</td>';
@@ -260,7 +260,7 @@
 				<div class="col-md-3">
 					
 					<!-- Add -->
-					<button type="button" class="btn btn-success" data-toggle="modal" data-target="#addModal">Add</button>
+					<button type="button" class="btn btn-success" data-toggle="modal" data-target="#addModal"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Add</button>
 					<br><br>
 					
 					<!-- Add Modal -->
