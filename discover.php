@@ -129,7 +129,7 @@
 				<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Trending <span class="caret"></span></button>
 				<ul class="dropdown-menu" role="menu">
 					<li class="active"><a href="#">Trending</a></li>
-					<li><a href="#">Recommendations</a></li>
+					<script>if (Parse.User.current()) document.write('<li><a href="#">Recommendations</a></li>');</script>
 					<li class="divider"></li>
 					<li><a href="#">Alternative Rock</a></li>
 					<li><a href="#">Dance & EDM</a></li>
