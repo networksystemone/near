@@ -86,6 +86,7 @@
 			<h1>Account</h1>
 			
 			<img src="profile.jpg" class="img-thumbnail">
+			<br>
 			
 			<p>Name: <script>document.write(Parse.User.current().get("name"));</script> <a href="#">(Edit)</a></p>
 			<p>Email: <script>document.write(Parse.User.current().get("email"));</script> <a href="#">(Edit)</a></p>
