@@ -220,9 +220,6 @@
 							<span class="glyphicon glyphicon-user" aria-hidden="true"></span> 202,124
 						</div>
 					</div>
-					
-					
-					
 				</div>
 			</div>
 			
