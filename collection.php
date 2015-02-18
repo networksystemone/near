@@ -122,10 +122,10 @@
 											
 											document.getElementById("myTable").innerHTML += '<tr>';
 											document.getElementById("myTable").innerHTML += '<td><button type="button" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-play" aria-hidden="true"></span></button></td>';
-											document.getElementById("myTable").innerHTML += '<td>' + object.get('track') + '</td>';
-											document.getElementById("myTable").innerHTML += '<td>' + object.get('artist') + '</td>';
-											document.getElementById("myTable").innerHTML += '<td>' + object.get('time') + '</td>';
-											document.getElementById("myTable").innerHTML += '<td>' + object.get('album') + '</td>';
+											document.getElementById("myTable").innerHTML += '<td>asdfasdf</td>';
+											document.getElementById("myTable").innerHTML += '<td>asdf</td>';
+											document.getElementById("myTable").innerHTML += '<td>asdf</td>';
+											document.getElementById("myTable").innerHTML += '<td>asdf</td>';
 											document.getElementById("myTable").innerHTML += '<td>1 day ago</td>';
 											document.getElementById("myTable").innerHTML += '<td>';
 											document.getElementById("myTable").innerHTML += '<div class="btn-group btn-group-xs" role="group" aria-label="...">';
