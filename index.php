@@ -9,8 +9,10 @@
 		
 		<title>Near</title>
 		
+		<!-- Bootstrap -->
 		<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 		
+		<!-- Parse -->
 		<script src="//www.parsecdn.com/js/parse-1.3.4.min.js"></script>
 		
 		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -38,7 +40,7 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" href="index.php"><span class="glyphicon glyphicon-fire" aria-hidden="true"></span> Near</a>
+					<a class="navbar-brand" href="index.php"><span class="glyphicon glyphicon-fire" aria-hidden="true"></span> Near <span class="label label-success">Beta</span></a>
 				</div>
 				<div id="navbar" class="collapse navbar-collapse">
 					<ul class="nav navbar-nav">
@@ -87,6 +89,8 @@
 		
 		<!-- Content -->
 		<div class="container">
+			
+			<!-- Details -->
 			<div class="row">
 				<div class="col-md-4">
 					<h2><span class="glyphicon glyphicon-leaf" aria-hidden="true"></span> Simple</h2>
@@ -118,7 +122,10 @@
 			</footer>
 		</div>
 		
+		<!-- jQuery -->
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+		
+		<!-- Bootstrap -->
 		<script src="bootstrap/js/bootstrap.min.js"></script>
 	</body>
 </html>
