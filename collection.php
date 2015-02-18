@@ -97,37 +97,6 @@
 			<div class="row">
 				<div class="col-md-9">
 					
-					<script>
-					
-						var query = new Parse.Query(Parse.Object.extend("Music"));
-						query.equalTo("user", "vXTGOWjTmf");
-						query.find({
-							success: function(results) {
-								for (var i = 0; i < results.length; i++) { 
-									var object = results[i];
-									
-									document.write('<tr>');
-									document.write('<td><button type="button" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-play" aria-hidden="true"></span></button></td>');
-									document.write('<td>' + object.get('track') + '</td>');
-									document.write('<td>' + object.get('artist') + '</td>');
-									document.write('<td>' + object.get('time') + '</td>');
-									document.write('<td>' + object.get('album') + '</td>');
-									document.write('<td>1 day ago</td>');
-									document.write('<td>');
-									document.write('<div class="btn-group btn-group-xs" role="group" aria-label="...">');
-									document.write('<button type="button" class="btn btn-default"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></button>');
-									document.write('<button type="button" class="btn btn-default"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>');
-									document.write('</div>');
-									document.write('</td>');
-									document.write('</tr>');
-								}
-							},
-							error: function(error) {
-								alert("Error: " + error.code + " " + error.message);
-							}
-						});
-					</script>
-					
 					<!-- Table -->
 					<table class="table table-hover table-condensed">
 						<thead>
