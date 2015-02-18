@@ -112,85 +112,116 @@
 						</thead>
 						<tbody>
 							<tr>
-								<td><a href="#" target="blank"><span class="glyphicon glyphicon-play" aria-hidden="true"></span></a></a></td>
+								<td><button type="button" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-play" aria-hidden="true"></span></button></td>
 								<td>The Blacker the Berry</td>
 								<td>Kendrick Lamar</td>
 								<td>5:32</td>
 								<td>The Blacker the Berry</td>
 								<td>1 day ago</td>
-								<td><a href="#" target="blank"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a> &nbsp;<a href="#" target="blank"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></td>
+								<td>
+									<div class="btn-group btn-group-xs" role="group" aria-label="...">
+										<button type="button" class="btn btn-default"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></button>
+										<button type="button" class="btn btn-default"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
+									</div>
+								</td>
 							</tr>
 							<tr>
-								<td><a href="#" target="blank"><span class="glyphicon glyphicon-play" aria-hidden="true"></span></a></a></td>
+								<td><button type="button" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-play" aria-hidden="true"></span></button></td>
 								<td>Tree of Life</td>
 								<td>Ab-Soul</td>
 								<td>5:37</td>
 								<td>These Days...</td>
 								<td>1 day ago</td>
-								<td><a href="#" target="blank"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a> &nbsp;<a href="#" target="blank"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></td>
+								<td>
+									<div class="btn-group btn-group-xs" role="group" aria-label="...">
+										<button type="button" class="btn btn-default"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></button>
+										<button type="button" class="btn btn-default"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
+									</div>
+								</td>
 							</tr>
 							<tr>
-								<td><a href="#" target="blank"><span class="glyphicon glyphicon-play" aria-hidden="true"></span></a></a></td>
-								<td>Fire Squad</td>
-								<td>J. Cole</td>
-								<td>4:48</td>
-								<td>2014 Forest Hills Drive</td>
-								<td>1 day ago</td>
-								<td><a href="#" target="blank"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a> &nbsp;<a href="#" target="blank"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></td>
-							</tr>
-							<tr>
-								<td><a href="#" target="blank"><span class="glyphicon glyphicon-play" aria-hidden="true"></span></a></a></td>
+								<td><button type="button" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-play" aria-hidden="true"></span></button></td>
 								<td>The Blacker the Berry</td>
 								<td>Kendrick Lamar</td>
 								<td>5:32</td>
 								<td>The Blacker the Berry</td>
 								<td>1 day ago</td>
-								<td><a href="#" target="blank"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a> &nbsp;<a href="#" target="blank"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></td>
+								<td>
+									<div class="btn-group btn-group-xs" role="group" aria-label="...">
+										<button type="button" class="btn btn-default"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></button>
+										<button type="button" class="btn btn-default"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
+									</div>
+								</td>
 							</tr>
 							<tr>
-								<td><a href="#" target="blank"><span class="glyphicon glyphicon-play" aria-hidden="true"></span></a></a></td>
+								<td><button type="button" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-play" aria-hidden="true"></span></button></td>
 								<td>Tree of Life</td>
 								<td>Ab-Soul</td>
 								<td>5:37</td>
 								<td>These Days...</td>
 								<td>1 day ago</td>
-								<td><a href="#" target="blank"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a> &nbsp;<a href="#" target="blank"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></td>
+								<td>
+									<div class="btn-group btn-group-xs" role="group" aria-label="...">
+										<button type="button" class="btn btn-default"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></button>
+										<button type="button" class="btn btn-default"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
+									</div>
+								</td>
 							</tr>
 							<tr>
-								<td><a href="#" target="blank"><span class="glyphicon glyphicon-play" aria-hidden="true"></span></a></a></td>
+								<td><button type="button" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-play" aria-hidden="true"></span></button></td>
 								<td>Fire Squad</td>
 								<td>J. Cole</td>
 								<td>4:48</td>
 								<td>2014 Forest Hills Drive</td>
 								<td>1 day ago</td>
-								<td><a href="#" target="blank"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a> &nbsp;<a href="#" target="blank"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></td>
+								<td>
+									<div class="btn-group btn-group-xs" role="group" aria-label="...">
+										<button type="button" class="btn btn-default"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></button>
+										<button type="button" class="btn btn-default"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
+									</div>
+								</td>
 							</tr>
 							<tr>
-								<td><a href="#" target="blank"><span class="glyphicon glyphicon-play" aria-hidden="true"></span></a></a></td>
+								<td><button type="button" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-play" aria-hidden="true"></span></button></td>
 								<td>The Blacker the Berry</td>
 								<td>Kendrick Lamar</td>
 								<td>5:32</td>
 								<td>The Blacker the Berry</td>
 								<td>1 day ago</td>
-								<td><a href="#" target="blank"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a> &nbsp;<a href="#" target="blank"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></td>
+								<td>
+									<div class="btn-group btn-group-xs" role="group" aria-label="...">
+										<button type="button" class="btn btn-default"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></button>
+										<button type="button" class="btn btn-default"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
+									</div>
+								</td>
 							</tr>
 							<tr>
-								<td><a href="#" target="blank"><span class="glyphicon glyphicon-play" aria-hidden="true"></span></a></a></td>
+								<td><button type="button" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-play" aria-hidden="true"></span></button></td>
 								<td>Tree of Life</td>
 								<td>Ab-Soul</td>
 								<td>5:37</td>
 								<td>These Days...</td>
 								<td>1 day ago</td>
-								<td><a href="#" target="blank"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a> &nbsp;<a href="#" target="blank"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></td>
+								<td>
+									<div class="btn-group btn-group-xs" role="group" aria-label="...">
+										<button type="button" class="btn btn-default"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></button>
+										<button type="button" class="btn btn-default"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
+									</div>
+								</td>
 							</tr>
 							<tr>
-								<td><a href="#" target="blank"><span class="glyphicon glyphicon-play" aria-hidden="true"></span></a></a></td>
+								<td><button type="button" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-play" aria-hidden="true"></span></button></td>
 								<td>Fire Squad</td>
 								<td>J. Cole</td>
 								<td>4:48</td>
 								<td>2014 Forest Hills Drive</td>
 								<td>1 day ago</td>
-								<td><a href="#" target="blank"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a> &nbsp;<a href="#" target="blank"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></td>
+								<td>
+									<div class="btn-group btn-group-xs" role="group" aria-label="...">
+										<button type="button" class="btn btn-default"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></button>
+										<button type="button" class="btn btn-default"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
+									</div>
+								</td>
 							</tr>
 						</tbody>
 					</table>
