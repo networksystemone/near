@@ -98,15 +98,21 @@
 				<div class="col-md-9">
 					
 					<script>
+					
 						var GameScore = Parse.Object.extend("Music");
 						var query = new Parse.Query(GameScore);
-						query.equalTo("playerName", "Dan Stemkoski");
-						query.get("BYEc59rMXh", {
-							success: function(gameScore) {
-								alert(gameScore.get("track"));
+						query.equalTo("user", "vXTGOWjTmf");
+						query.find({
+							success: function(results) {
+								alert("Successfully retrieved " + results.length + " scores.");
+								// Do something with the returned Parse.Object values
+								for (var i = 0; i < results.length; i++) { 
+									var object = results[i];
+									alert(object.id + ' - ' + object.get('track'));
+								}
 							},
-							error: function(object, error) {
-							    alert("Unexpected Error");
+							error: function(error) {
+								alert("Error: " + error.code + " " + error.message);
 							}
 						});
 					</script>

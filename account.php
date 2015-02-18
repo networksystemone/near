@@ -86,6 +86,8 @@
 			<h1>Account</h1>
 			
 			<img src="profile.jpg" class="img-thumbnail">
+			<br>
+			<a href="#">Edit</a>
 			<br><br>
 			
 			<p>Name: <script>document.write(Parse.User.current().get("name"));</script> <a href="#">(Edit)</a></p>
