@@ -87,13 +87,6 @@
 			<!-- Wrapper for slides -->
 			<div class="carousel-inner">
 				<div class="item active">
-					<img src="drake.jpg">
-					<div class="carousel-caption">
-						<h3>If You're Reading This It's Too Late</h3>
-						<p>Drake drops his newest mixtape on iTunes. <a href="#">More</a></p>
-					</div>
-				</div>
-				<div class="item">
 					<img src="drake-2.jpeg">
 					<div class="carousel-caption">
 						<h3>Drake Is Getting "Rich Off A Mixtape" for the Second Time</h3>
@@ -101,10 +94,17 @@
 					</div>
 				</div>
 				<div class="item">
-					<img src="//placehold.it/1400x500">
+					<img src="tyga.jpeg">
 					<div class="carousel-caption">
-						<h3>Caption Text</h3>
-						<p>Subtitle</p>
+						<h3>Chris Brown And Tyga Hope You "Remember" This New Fan of a Fan Single</h3>
+						<p>Listen to "Remember Me" as you prep for Fan Of A Fan 2.</p>
+					</div>
+				</div>
+				<div class="item">
+					<img src="drake.jpg">
+					<div class="carousel-caption">
+						<h3>If You're Reading This It's Too Late</h3>
+						<p>Drake drops his newest mixtape on iTunes. <a href="#">More</a></p>
 					</div>
 				</div>
 			</div>
