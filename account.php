@@ -85,9 +85,11 @@
 			
 			<h1>Account</h1>
 			
-			<p>Name: Charles Fries <a href="#">(Edit)</a></p>
-			<p>Email: charliefries@icloud.com <a href="#">(Edit)</a></p>
-			<p>Username: charlesfries <a href="#">(Edit)</a></p>
+			<script>document.write(Parse.User.current().get("name"));</script>
+			
+			<p>Name: <script>document.write(Parse.User.current().get("name"));</script> <a href="#">(Edit)</a></p>
+			<p>Email: <script>document.write(Parse.User.current().get("email"));</script> <a href="#">(Edit)</a></p>
+			<p>Username: <script>document.write(Parse.User.current().get("username"));</script> <a href="#">(Edit)</a></p>
 			<p>Password: <a href="#">Change</a></p>
 			
 			<button class="btn btn-default" type="button" onclick="signOut()">Sign Out</button>
