@@ -87,7 +87,7 @@
 			<!-- Wrapper for slides -->
 			<div class="carousel-inner">
 				<div class="item active">
-					<img src="//placehold.it/1400x500">
+					<img src="drake.jpg" height="500" width="1400">
 					<div class="carousel-caption">
 						<h3>If You're Reading This It's Too Late</h3>
 						<p>Drake drops his newest mixtape on iTunes. <a href="#">More</a></p>
