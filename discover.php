@@ -158,7 +158,7 @@
 					<iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/181305899&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
 					<hr>
 					<h4>No Role Modelz <small>J. Cole</small></h4>
-					<iframe src="https://embed.spotify.com/?uri=spotify:track:62vpWI1CHwFy7tMIcSStl8" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
+					<iframe src="https://embed.spotify.com/?uri=spotify:track:62vpWI1CHwFy7tMIcSStl8" width="100%" height="80" frameborder="0" allowtransparency="true"></iframe>
 					<hr>
 				</div>
 				<div class="col-md-3">
