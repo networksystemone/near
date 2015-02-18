@@ -99,13 +99,10 @@
 					
 					<script>
 					
-						var GameScore = Parse.Object.extend("Music");
-						var query = new Parse.Query(GameScore);
+						var query = new Parse.Query(Parse.Object.extend("Music"));
 						query.equalTo("user", "vXTGOWjTmf");
 						query.find({
 							success: function(results) {
-								alert("Successfully retrieved " + results.length + " scores.");
-								// Do something with the returned Parse.Object values
 								for (var i = 0; i < results.length; i++) { 
 									var object = results[i];
 									alert(object.id + ' - ' + object.get('track'));
