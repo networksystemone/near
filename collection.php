@@ -98,7 +98,7 @@
 				<div class="col-md-9">
 					
 					<!-- Table -->
-					<table class="table table-striped table-condensed">
+					<table class="table table-hover table-condensed">
 						<thead>
 							<tr>
 								<th></th>
