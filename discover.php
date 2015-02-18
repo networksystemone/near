@@ -37,7 +37,7 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" href="index.php"><span class="glyphicon glyphicon-fire" aria-hidden="true"></span> Near <span class="label label-success">Beta</span></a>
+					<a class="navbar-brand" href="index.php">Near</a>
 				</div>
 				<div id="navbar" class="collapse navbar-collapse">
 					<ul class="nav navbar-nav">
@@ -82,6 +82,7 @@
 				<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
 				<li data-target="#carousel-example-generic" data-slide-to="1"></li>
 				<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+				<li data-target="#carousel-example-generic" data-slide-to="3"></li>
 			</ol>
 			
 			<!-- Wrapper for slides -->
@@ -101,10 +102,17 @@
 					</div>
 				</div>
 				<div class="item">
-					<img src="drake.jpg">
+					<img src="drake-2.jpeg">
 					<div class="carousel-caption">
-						<h3>If You're Reading This It's Too Late</h3>
-						<p>Drake drops his newest mixtape on iTunes.</p>
+						<h3>Drake Is Getting "Rich Off A Mixtape" for the Second Time</h3>
+						<p>If You're Reading This It's Too Late is even breaking Spotify records.</p>
+					</div>
+				</div>
+				<div class="item">
+					<img src="tyga.jpeg">
+					<div class="carousel-caption">
+						<h3>Chris Brown and Tyga Hope You "Remember" This New Single</h3>
+						<p>Listen to "Remember Me" as you prep for Fan Of A Fan 2.</p>
 					</div>
 				</div>
 			</div>
@@ -118,11 +126,13 @@
 			</a>
 		</div>
 		
+		<br>
+		
 		<!-- Content -->
 		<div class="container">
 			
 			<!-- Title -->
-			<h1>Discover <small>Find the hottest tracks and personalized recommendations.</small></h1>
+			<h1><span class="glyphicon glyphicon-certificate" aria-hidden="true"></span> Discover <small>Find the hottest tracks and personalized recommendations.</small></h1>
 			<br>
 			
 			<div class="btn-group">
@@ -144,17 +154,29 @@
 					<li><a href="#">Rock</a></li>
 				</ul>
 			</div>
+			<br>
 			
 			<div class="row">
 				<div class="col-md-9">
+					
+					
 					<hr>
-					<h4><span style="color: red;" class="glyphicon glyphicon-fire" aria-hidden="true"></span> Throw Sum Mo (feat. Nicki Minaj & Young Thug) <small>Rae Sremmurd</small></h4>
+					<div class="row">
+						<div class="col-md-9">
+							<h4><span style="color: red;" class="glyphicon glyphicon-fire" aria-hidden="true"></span> <span style="color: red;">Fire</span> Throw Sum Mo (feat. Nicki Minaj & Young Thug) <small>Rae Sremmurd</small></h4>
+						</div>
+						<div class="col-md-3">
+							<p class="text-right"><small><span class="glyphicon glyphicon-play" aria-hidden="true"></span> 8,929 &nbsp; <span class="glyphicon glyphicon-cloud-download" aria-hidden="true"></span> 4,980 &nbsp; <span class="glyphicon glyphicon-comment" aria-hidden="true"></span> 719</small></p>
+						</div>
+					</div>
+					
 					<iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/181305899&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+					
 					<hr>
-					<h4><span style="color: red;" class="glyphicon glyphicon-fire" aria-hidden="true"></span> CoCo <small>O.T. Genasis</small></h4>
+					<h4><span style="color: red;" class="glyphicon glyphicon-fire" aria-hidden="true"></span> <span style="color: red;">Fire</span> CoCo <small>O.T. Genasis</small></h4>
 					<iframe src="https://embed.spotify.com/?uri=spotify:track:2JI71GHwq2LN8mtq3iCLYo" width="100%" height="80" frameborder="0" allowtransparency="true"></iframe>
 					<hr>
-					<h4>I Don't Mind (feat. Juicy J) <small>Usher</small></h4>
+					<h4><span style="color: orange;" class="glyphicon glyphicon-fire" aria-hidden="true"></span> <span style="color: orange;">Hot</span> I Don't Mind (feat. Juicy J) <small>Usher</small></h4>
 					<iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/170339902&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
 					<hr>
 					<h4>No Role Modelz <small>J. Cole</small></h4>
@@ -162,28 +184,20 @@
 					<hr>
 				</div>
 				<div class="col-md-3">
+					<input id="name" type="text" class="form-control" placeholder="Search">
+					
+					<br>
+					
 					<h4>Who to Follow</h4>
 					
 					<div class="media">
 						<div class="media-left">
 							<a href="#">
-								<img class="media-object" src="//placehold.it/64x64">
+								<img class="media-object" src="follow/kendrick.png">
 							</a>
 						</div>
 						<div class="media-body">
-							<h4 class="media-heading">Charles Fries</h4>
-							<span class="glyphicon glyphicon-user" aria-hidden="true"></span> 5,819
-						</div>
-					</div>
-					
-					<div class="media">
-						<div class="media-left">
-							<a href="#">
-								<img class="media-object" src="//placehold.it/64x64">
-							</a>
-						</div>
-						<div class="media-body">
-							<h4 class="media-heading">Kendrick Lamar</h4>
+							<h5 class="media-heading">Kendrick Lamar <span style="color: red;" class="glyphicon glyphicon-certificate" aria-hidden="true"></span></h4>
 							<span class="glyphicon glyphicon-user" aria-hidden="true"></span> 892,672
 						</div>
 					</div>
@@ -191,11 +205,11 @@
 					<div class="media">
 						<div class="media-left">
 							<a href="#">
-								<img class="media-object" src="//placehold.it/64x64">
+								<img class="media-object" src="follow/cole.png">
 							</a>
 						</div>
 						<div class="media-body">
-							<h4 class="media-heading">J. Cole</h4>
+							<h5 class="media-heading">J. Cole <span style="color: red;" class="glyphicon glyphicon-certificate" aria-hidden="true"></span></h4>
 							<span class="glyphicon glyphicon-user" aria-hidden="true"></span> 152,124
 						</div>
 					</div>
@@ -203,11 +217,11 @@
 					<div class="media">
 						<div class="media-left">
 							<a href="#">
-								<img class="media-object" src="//placehold.it/64x64">
+								<img class="media-object" src="follow/ab.png">
 							</a>
 						</div>
 						<div class="media-body">
-							<h4 class="media-heading">Ab-Soul</h4>
+							<h5 class="media-heading">Ab-Soul <span style="color: red;" class="glyphicon glyphicon-certificate" aria-hidden="true"></span></h4>
 							<span class="glyphicon glyphicon-user" aria-hidden="true"></span> 142,124
 						</div>
 					</div>
@@ -215,14 +229,16 @@
 					<div class="media">
 						<div class="media-left">
 							<a href="#">
-								<img class="media-object" src="//placehold.it/64x64">
+								<img class="media-object" src="follow/childish.png">
 							</a>
 						</div>
 						<div class="media-body">
-							<h4 class="media-heading">Childish Gambino</h4>
-							<span class="glyphicon glyphicon-user" aria-hidden="true"></span> 202,124
+							<h5 class="media-heading">Childish Gambino <span style="color: red;" class="glyphicon glyphicon-certificate" aria-hidden="true"></span></h4>
+							<spanclass="glyphicon glyphicon-user" aria-hidden="true"></span> 202,124
 						</div>
 					</div>
+					<br>
+					<div class="well" style="height: 243px;"></div>
 				</div>
 			</div>
 			
@@ -235,7 +251,7 @@
 			<!-- Footer -->
 			<hr>
 			<footer>
-				<p>&copy; 2015 Figure Inc.</p>
+				<p>&copy; 2015 Figure Inc. &middot; Made in Seattle &middot; <a href="#">Company</a> &middot; <a href="#">Downloads</a> &middot; <a href="#">Blog &middot; <a href="#">Careers</a> &middot; <a href="#">Forums</a> &middot; <a href="#">Help Center</a></p>
 			</footer>
 		</div>
 		

@@ -9,9 +9,8 @@
 		
 		<title>Sign In - Near</title>
 		
+		<!-- Bootstrap -->
 		<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
-		
-		<script src="//www.parsecdn.com/js/parse-1.3.4.min.js"></script>
 		
 		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 		<!--[if lt IE 9]>
@@ -28,6 +27,7 @@
 	</head>
 	<body>
 		
+		<!-- Navigation -->
 		<nav class="navbar navbar-inverse navbar-fixed-top">
 			<div class="container">
 				<div class="navbar-header">
@@ -37,7 +37,7 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" href="index.php"><span class="glyphicon glyphicon-fire" aria-hidden="true"></span> Near <span class="label label-success">Beta</span></a>
+					<a class="navbar-brand" href="index.php">Near</a>
 				</div>
 				<div id="navbar" class="collapse navbar-collapse">
 					<ul class="nav navbar-nav">
@@ -66,32 +66,12 @@
 			</div>
 		</nav>
 		
+		<!-- Container -->
 		<div class="container">
-			
-			<script>
-				Parse.initialize("uH37tzThA3MpgQL4KQ7fOr5OzkXGpvTxr3Zk4Kbu", "3f80eW7OWD4U8h7URD4iYdQ0TvKHSgIha1AahgHq");
-				
-				// Redirect
-				if (Parse.User.current()) {
-					window.location.replace("index.php");
-				} else {
-					
-					function signIn() {
-						Parse.User.logIn(document.getElementById("username").value, document.getElementById("password").value, {
-							success: function(user) {
-								window.location.replace("index.php");
-							},
-							error: function(user, error) {
-								alert("Failure");
-							}
-						});
-					}
-				}
-			</script>
-			
 			<center>
-				<h1>Sign In</h1>
 				
+				<!-- Title -->
+				<h1>Sign In</h1>
 				<br>
 				
 				<div class="row">
@@ -105,8 +85,14 @@
 							<div class="form-group">
 								<input type="password" class="form-control" id="password" placeholder="Password">
 							</div>
-							<button type="button" class="btn btn-success" onclick="signIn()">Sign In</button>
+							<button type="button" class="btn btn-success btn-block" onclick="signIn()">Sign In</button>
 						</form>
+						
+						<br>
+						
+						<p><a href="#">Forgot?</a></p>
+						
+						<p>Don't have an account? <a href="signup.php">Sign Up</a></p>
 					</div>
 					<div class="col-md-4">
 					</div>
@@ -115,17 +101,44 @@
 			
 			<br>
 			
+			<!-- Breadcrumb -->
 			<ol class="breadcrumb">
 				<li><a href="index.php">Home</a></li>
 				<li class="active">Sign In</li>
 			</ol>
-
+			
+			<!-- Footer -->
 			<hr>
-
 			<footer>
-				<p>&copy; 2015 Figure Inc.</p>
+				<p>&copy; 2015 Figure Inc. &middot; Made in Seattle &middot; <a href="#">Company</a> &middot; <a href="#">Downloads</a> &middot; <a href="#">Blog &middot; <a href="#">Careers</a> &middot; <a href="#">Forums</a> &middot; <a href="#">Help Center</a></p>
 			</footer>
 		</div>
+		
+		<!-- ########## JavaScript ########## -->
+		
+		<!-- Parse -->
+		<script src="//www.parsecdn.com/js/parse-1.3.4.min.js"></script>
+		
+		<script>
+			Parse.initialize("uH37tzThA3MpgQL4KQ7fOr5OzkXGpvTxr3Zk4Kbu", "3f80eW7OWD4U8h7URD4iYdQ0TvKHSgIha1AahgHq");
+			
+			// Redirect
+			if (Parse.User.current()) {
+				window.location.replace("index.php");
+			} else {
+				
+				function signIn() {
+					Parse.User.logIn(document.getElementById("username").value, document.getElementById("password").value, {
+						success: function(user) {
+							window.location.replace("collection.php");
+						},
+						error: function(user, error) {
+							alert("Failure");
+						}
+					});
+				}
+			}
+		</script>
 		
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 		<script src="bootstrap/js/bootstrap.min.js"></script>

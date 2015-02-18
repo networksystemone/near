@@ -9,8 +9,10 @@
 		
 		<title>Sign Up - Near</title>
 		
+		<!-- Bootstrap -->
 		<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 		
+		<!-- Parse -->
 		<script src="//www.parsecdn.com/js/parse-1.3.4.min.js"></script>
 		
 		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -28,6 +30,7 @@
 	</head>
 	<body>
 		
+		<!-- Navigation -->
 		<nav class="navbar navbar-inverse navbar-fixed-top">
 			<div class="container">
 				<div class="navbar-header">
@@ -37,7 +40,7 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" href="index.php"><span class="glyphicon glyphicon-fire" aria-hidden="true"></span> Near <span class="label label-success">Beta</span></a>
+					<a class="navbar-brand" href="index.php">Near</a>
 				</div>
 				<div id="navbar" class="collapse navbar-collapse">
 					<ul class="nav navbar-nav">
@@ -66,36 +69,8 @@
 			</div>
 		</nav>
 		
+		<!-- Container -->
 		<div class="container">
-			
-			<script>
-				Parse.initialize("uH37tzThA3MpgQL4KQ7fOr5OzkXGpvTxr3Zk4Kbu", "3f80eW7OWD4U8h7URD4iYdQ0TvKHSgIha1AahgHq");
-				
-				// Redirect
-				if (Parse.User.current()) {
-					window.location.replace("index.php");
-				} else {
-					
-					function signUp() {
-						
-						var user = new Parse.User();
-						user.set("name", document.getElementById("name").value);
-						user.set("email", document.getElementById("email").value);
-						user.set("username", document.getElementById("username").value);
-						user.set("password", document.getElementById("password").value);
-						
-						user.signUp(null, {
-							success: function(user) {
-								alert("You have successfully signed up. Please check your email to verify your email account.");
-								window.location.replace("index.php");
-							},
-							error: function(user, error) {
-								alert("Error: " + error.code + " " + error.message);
-							}
-						});
-					}
-				}
-			</script>
 			
 			<center>
 				
@@ -129,27 +104,55 @@
 									<input type="checkbox"> Agree to Near terms of service
 								</label>
 							</div>
-							<button type="button" class="btn btn-success" onclick="signUp()">Sign Up</button>
+							<button type="button" class="btn btn-success btn-block" onclick="signUp()">Sign Up</button>
 						</form>
 					</div>
 					<div class="col-md-4">
 					</div>
 				</div>
 			</center>
-			
 			<br>
 			
+			<!-- Breadcrumb -->
 			<ol class="breadcrumb">
 				<li><a href="index.php">Home</a></li>
 				<li class="active">Sign Up</li>
 			</ol>
-
+			
 			<!-- Footer -->
 			<hr>
 			<footer>
-				<p>&copy; 2015 Figure Inc.</p>
+				<p>&copy; 2015 Figure Inc. &middot; Made in Seattle &middot; <a href="#">Company</a> &middot; <a href="#">Downloads</a> &middot; <a href="#">Blog &middot; <a href="#">Careers</a> &middot; <a href="#">Forums</a> &middot; <a href="#">Help Center</a></p>
 			</footer>
 		</div>
+		
+		<script>
+			Parse.initialize("uH37tzThA3MpgQL4KQ7fOr5OzkXGpvTxr3Zk4Kbu", "3f80eW7OWD4U8h7URD4iYdQ0TvKHSgIha1AahgHq");
+			
+			// Redirect
+			if (Parse.User.current()) {
+				window.location.replace("index.php");
+			} else {
+				
+				// Sign Up
+				function signUp() {
+					var user = new Parse.User();
+					user.set("name", document.getElementById("name").value);
+					user.set("email", document.getElementById("email").value);
+					user.set("username", document.getElementById("username").value);
+					user.set("password", document.getElementById("password").value);
+					user.signUp(null, {
+						success: function(user) {
+							alert("You have successfully signed up. Please check your email to verify your email account.");
+							window.location.replace("collection.php");
+						},
+						error: function(user, error) {
+							alert("Error: " + error.code + " " + error.message);
+						}
+					});
+				}
+			}
+		</script>
 		
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 		<script src="bootstrap/js/bootstrap.min.js"></script>

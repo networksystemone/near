@@ -40,7 +40,7 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" href="index.php"><span class="glyphicon glyphicon-fire" aria-hidden="true"></span> Near <span class="label label-success">Beta</span></a>
+					<a class="navbar-brand" href="index.php">Near</a>
 				</div>
 				<div id="navbar" class="collapse navbar-collapse">
 					<ul class="nav navbar-nav">
@@ -83,11 +83,11 @@
 			<div class="container">
 				<h1>Once place for all your music.</h1>
 				<p>Consolidate your music libraries with Near. Simply link SoundCloud, Spotify, YouTube, or other tracks to Near to keep all your audio in one convenient location.</p>
-				<p><a class="btn btn-warning btn-lg" href="signup.php" role="button">Get started &raquo;</a></p>
+				<p><a class="btn btn-success btn-lg" href="collection.php" role="button">Get started &raquo;</a></p>
 			</div>
 		</div>
 		
-		<!-- Content -->
+		<!-- Container -->
 		<div class="container">
 			
 			<!-- Details -->
@@ -109,6 +109,88 @@
 				</div>
 			</div>
 			<br>
+		</div>
+			
+		<!-- Carousel -->
+		<div id="carousel-example-generic" class="carousel slide" data-ride="carousel" data-interval="5000">
+			<!-- Indicators -->
+			<ol class="carousel-indicators">
+				<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+				<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+				<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+				<li data-target="#carousel-example-generic" data-slide-to="3"></li>
+			</ol>
+			
+			<!-- Wrapper for slides -->
+			<div class="carousel-inner">
+				<div class="item active">
+					<img src="drake-2.jpeg">
+					<div class="carousel-caption">
+						<h3>Drake Is Getting "Rich Off A Mixtape" for the Second Time</h3>
+						<p>If You're Reading This It's Too Late is even breaking Spotify records.</p>
+					</div>
+				</div>
+				<div class="item">
+					<img src="tyga.jpeg">
+					<div class="carousel-caption">
+						<h3>Chris Brown and Tyga Hope You "Remember" This New Single</h3>
+						<p>Listen to "Remember Me" as you prep for Fan Of A Fan 2.</p>
+					</div>
+				</div>
+				<div class="item">
+					<img src="drake-2.jpeg">
+					<div class="carousel-caption">
+						<h3>Drake Is Getting "Rich Off A Mixtape" for the Second Time</h3>
+						<p>If You're Reading This It's Too Late is even breaking Spotify records.</p>
+					</div>
+				</div>
+				<div class="item">
+					<img src="tyga.jpeg">
+					<div class="carousel-caption">
+						<h3>Chris Brown and Tyga Hope You "Remember" This New Single</h3>
+						<p>Listen to "Remember Me" as you prep for Fan Of A Fan 2.</p>
+					</div>
+				</div>
+			</div>
+			
+			<!-- Controls -->
+			<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+				<span class="glyphicon glyphicon-chevron-left"></span>
+			</a>
+			<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+				<span class="glyphicon glyphicon-chevron-right"></span>
+			</a>
+		</div>
+		
+		
+		<br>
+		
+		<!-- Container -->
+		<div class="container">
+			
+			<!-- Details -->
+			<div class="row">
+				<div class="col-md-4">
+					<h2><span class="glyphicon glyphicon-leaf" aria-hidden="true"></span> Simple</h2>
+					<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+					<p><a class="btn btn-default" href="#" role="button">Learn more &raquo;</a></p>
+				</div>
+				<div class="col-md-4">
+					<h2><span class="glyphicon glyphicon-headphones" aria-hidden="true"></span> Accurate</h2>
+					<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+					<p><a class="btn btn-default" href="#" role="button">Learn more &raquo;</a></p>
+				</div>
+				<div class="col-md-4">
+					<h2><span class="glyphicon glyphicon-usd" aria-hidden="true"></span> Free</h2>
+					<p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+					<p><a class="btn btn-default" href="#" role="button">Learn more &raquo;</a></p>
+				</div>
+			</div>
+			<br>
+		</div>
+		
+		<!-- Container -->
+		<div class="container">
 			
 			<!-- Breadcrumb -->
 			<ol class="breadcrumb">
@@ -118,7 +200,7 @@
 			<!-- Footer -->
 			<hr>
 			<footer>
-				<p>&copy; 2015 Figure Inc.</p>
+				<p>&copy; 2015 Figure Inc. &middot; Made in Seattle &middot; <a href="#">Company</a> &middot; <a href="#">Downloads</a> &middot; <a href="#">Blog &middot; <a href="#">Careers</a> &middot; <a href="#">Forums</a> &middot; <a href="#">Help Center</a></p>
 			</footer>
 		</div>
 		
