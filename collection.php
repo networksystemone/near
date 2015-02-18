@@ -120,20 +120,7 @@
 										for (var i = 0; i < results.length; i++) { 
 											var object = results[i];
 											
-											document.getElementById("myTable").innerHTML += '<tr>';
-											document.getElementById("myTable").innerHTML += '<td><button type="button" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-play" aria-hidden="true"></span></button></td>';
-											document.getElementById("myTable").innerHTML += '<td>asdfasdf</td>';
-											document.getElementById("myTable").innerHTML += '<td>asdf</td>';
-											document.getElementById("myTable").innerHTML += '<td>asdf</td>';
-											document.getElementById("myTable").innerHTML += '<td>asdf</td>';
-											document.getElementById("myTable").innerHTML += '<td>1 day ago</td>';
-											document.getElementById("myTable").innerHTML += '<td>';
-											document.getElementById("myTable").innerHTML += '<div class="btn-group btn-group-xs" role="group" aria-label="...">';
-											document.getElementById("myTable").innerHTML += '<button type="button" class="btn btn-default"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></button>';
-											document.getElementById("myTable").innerHTML += '<button type="button" class="btn btn-default"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>';
-											document.getElementById("myTable").innerHTML += '</div>';
-											document.getElementById("myTable").innerHTML += '</td>';
-											document.getElementById("myTable").innerHTML += '</tr>';
+											document.getElementById("myTable").innerHTML += '<tr><td><button type="button" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-play" aria-hidden="true"></span></button></td><td>asdfasdf</td><td>asdf</td><td>asdf</td><td>asdf</td><td>1 day ago</td><td><div class="btn-group btn-group-xs" role="group" aria-label="..."><button type="button" class="btn btn-default"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></button><button type="button" class="btn btn-default"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button></div></td></tr>';
 										}
 									},
 									error: function(error) {
