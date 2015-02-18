@@ -107,7 +107,27 @@
 							<h4 class="modal-title" id="myModalLabel">Add</h4>
 						</div>
 						<div class="modal-body">
-							<p>Are you sure you would like to delete your account? This action is permanent.</p>
+							<p>Fill out the fields below to add a new track.</p>
+							
+							<form>
+								<div class="form-group">
+									<input type="text" class="form-control" id="name" placeholder="Name" autofocus>
+								</div>
+								<div class="form-group">
+									<input type="text" class="form-control" id="email" placeholder="Email">
+								</div>
+								<div class="form-group">
+									<input type="text" class="form-control" id="username" placeholder="Username">
+								</div>
+								<div class="form-group">
+									<input type="password" class="form-control" id="password" placeholder="Password">
+								</div>
+								<div class="checkbox">
+									<label>
+										<input type="checkbox" checked> Make public
+									</label>
+								</div>
+							</form>
 						</div>
 						<div class="modal-footer">
 							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
