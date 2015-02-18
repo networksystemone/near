@@ -114,7 +114,7 @@
 							
 							<script>
 								var query = new Parse.Query(Parse.Object.extend("Music"));
-								query.equalTo("user", "vXTGOWjTmf");
+								query.equalTo("user", Parse.User.current().object.id);
 								query.find({
 									success: function(results) {
 										for (var i = 0; i < results.length; i++) { 
