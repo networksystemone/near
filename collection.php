@@ -100,6 +100,7 @@
 					<script>
 						var GameScore = Parse.Object.extend("Music");
 						var query = new Parse.Query(GameScore);
+						query.equalTo("playerName", "Dan Stemkoski");
 						query.get("BYEc59rMXh", {
 							success: function(gameScore) {
 								alert(gameScore.get("track"));
