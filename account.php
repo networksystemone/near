@@ -95,6 +95,7 @@
 					
 					<!-- Delete Account -->
 					<button class="btn btn-danger btn-block" type="button" data-toggle="modal" data-target="#deleteAccountModal">Delete Account</button>
+					<br>
 				</div>
 				<div class="col-md-10">
 					

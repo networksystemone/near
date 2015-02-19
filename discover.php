@@ -135,23 +135,38 @@
 			<h1><span class="glyphicon glyphicon-certificate" aria-hidden="true"></span> Discover <small>Find the hottest tracks and personalized recommendations.</small></h1>
 			<br>
 			
+			<?php
+				if      (!$_GET["s"])                     $title = "Trending";
+				else if ($_GET["s"] == "alternativerock") $title = "Alternative Rock";
+				else if ($_GET["s"] == "danceedm")        $title = "Dance & EDM";
+				else if ($_GET["s"] == "dubstep")         $title = "Dubstep";
+				else if ($_GET["s"] == "hiphoprap")       $title = "Hip-Hop & Rap";
+				else if ($_GET["s"] == "house")           $title = "House";
+				else if ($_GET["s"] == "indie")           $title = "Indie";
+				else if ($_GET["s"] == "metal")           $title = "Metal";
+				else if ($_GET["s"] == "pop")             $title = "Pop";
+				else if ($_GET["s"] == "rbsoul")          $title = "R&B & Soul";
+				else if ($_GET["s"] == "reggae")          $title = "Reggae";
+				else if ($_GET["s"] == "rock")            $title = "Rock";
+			?>
+			
 			<div class="btn-group">
-				<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Trending <span class="caret"></span></button>
+				<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><?php echo $title; ?> <span class="caret"></span></button>
 				<ul class="dropdown-menu" role="menu">
-					<li class="active"><a href="">Trending</a></li>
+					<li<?php if (!$_GET["s"]) echo ' class="active"';?>><a href="discover.php">Trending</a></li>
 					<script>if (Parse.User.current()) document.write('<li><a href="?s=recommendations">Recommendations</a></li>');</script>
 					<li class="divider"></li>
-					<li><a href="?s=alternativerock">Alternative Rock</a></li>
-					<li><a href="?s=danceedm">Dance & EDM</a></li>
-					<li><a href="?s=dubstep">Dubstep</a></li>
-					<li><a href="?s=hiphoprap">Hip-Hop & Rap</a></li>
-					<li><a href="?s=house">House</a></li>
-					<li><a href="?s=indie">Indie</a></li>
-					<li><a href="?s=metal">Metal</a></li>
-					<li><a href="?s=pop">Pop</a></li>
-					<li><a href="?s=rbsoul">R&B & Soul</a></li>
-					<li><a href="?s=reggae">Reggae</a></li>
-					<li><a href="?s=rock">Rock</a></li>
+					<li<?php if ($_GET["s"] == "alternativerock") echo ' class="active"';?>><a href="?s=alternativerock">Alternative Rock</a></li>
+					<li<?php if ($_GET["s"] == "danceedm")        echo ' class="active"';?>><a href="?s=danceedm">Dance & EDM</a></li>
+					<li<?php if ($_GET["s"] == "dubstep")         echo ' class="active"';?>><a href="?s=dubstep">Dubstep</a></li>
+					<li<?php if ($_GET["s"] == "hiphoprap")       echo ' class="active"';?>><a href="?s=hiphoprap">Hip-Hop & Rap</a></li>
+					<li<?php if ($_GET["s"] == "house")           echo ' class="active"';?>><a href="?s=house">House</a></li>
+					<li<?php if ($_GET["s"] == "indie")           echo ' class="active"';?>><a href="?s=indie">Indie</a></li>
+					<li<?php if ($_GET["s"] == "metal")           echo ' class="active"';?>><a href="?s=metal">Metal</a></li>
+					<li<?php if ($_GET["s"] == "pop")             echo ' class="active"';?>><a href="?s=pop">Pop</a></li>
+					<li<?php if ($_GET["s"] == "rbsoul")          echo ' class="active"';?>><a href="?s=rbsoul">R&B & Soul</a></li>
+					<li<?php if ($_GET["s"] == "reggae")          echo ' class="active"';?>><a href="?s=reggae">Reggae</a></li>
+					<li<?php if ($_GET["s"] == "rock")            echo ' class="active"';?>><a href="?s=rock">Rock</a></li>
 				</ul>
 			</div>
 			<br>
@@ -185,8 +200,8 @@
 					
 					<nav>
 						<ul class="pager">
-							<li class="previous disabled"><a href="#"><span aria-hidden="true">&larr;</span> Previous</a></li>
-							<li class="next"><a href="#">Next <span aria-hidden="true">&rarr;</span></a></li>
+							<li class="previous disabled"><a href="#"><span aria-hidden="true">&larr;</span> Next</a></li>
+							<li class="next"><a href="#">Previous <span aria-hidden="true">&rarr;</span></a></li>
 						</ul>
 					</nav>
 					

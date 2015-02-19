@@ -99,7 +99,6 @@
 						<li role="presentation" class="active"><a href="#">All Tracks</a></li>
 						<li role="presentation" class="disabled"><a href="#">Playlists (Coming Soon)</a></li>
 					</ul>
-					
 					<br>
 					
 					<!-- Table -->
@@ -136,7 +135,7 @@
 									</div>
 								</td>
 							</tr>
-						-->
+							-->
 						</tbody>
 					</table>
 					
@@ -157,10 +156,11 @@
 					<div class="btn-group">
 						<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Sort <span class="caret"></span></button>
 						<ul class="dropdown-menu" role="menu">
-							<li><a href="#" onclick="sortAdded()">Added</a></li>
-							<li><a href="#" onclick="sortAlbum()">Album</a></li>
-							<li><a href="#" onclick="sortArtist()">Artist</a></li>
 							<li><a href="#" onclick="sortName()">Name</a></li>
+							<li><a href="#" onclick="sortArtist()">Artist</a></li>
+							<li><a href="#" onclick="sortAlbum()">Album</a></li>
+							<li><a href="#" onclick="sortAdded()">Added</a></li>
+							<li><a href="#" onclick="sortTime()">Time</a></li>
 						</ul>
 					</div>
 					<br><br>
@@ -491,6 +491,36 @@
 				var query = new Parse.Query(Parse.Object.extend("Music"));
 				query.equalTo("user", Parse.User.current().id);
 				query.ascending("name");
+				query.find({
+					success: function(results) {
+						
+						spinner.stop();
+						
+						document.getElementById("myTable").innerHTML = "";
+						for (var i = 0; i < results.length; i++) { 
+							var object = results[i];
+							
+							var date = new Date(object.createdAt);
+							var added = date.getMonth() + "/" + date.getDate() + "/" + date.getFullYear()
+							
+							document.getElementById("myTable").innerHTML += '<tr><td><a role="button" class="btn btn-default btn-xs" href="' + object.get('link') + '" target="blank"> &nbsp; &nbsp; <span class="glyphicon glyphicon-play" aria-hidden="true"></span> &nbsp; &nbsp; </a></td><td>' + object.get('name') + '</td><td>' + object.get('artist') + '</td><td>' + object.get('time') + '</td><td>' + object.get('album') + '</td><td>' + added + '</td><td><div class="btn-group btn-group-xs" role="group" aria-label="..."><button type="button" class="btn btn-default" data-toggle="modal" data-target="#informationModal"><span class="glyphicon glyphicon-stats" aria-hidden="true"></span></button><button type="button" class="btn btn-default" data-toggle="modal" data-target="#editModal"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></button><button type="button" class="btn btn-default" data-toggle="modal" data-target="#removeModal"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button></div></td></tr>';
+						}
+					},
+					error: function(error) {
+						spinner.stop();
+						
+						alert("Error: " + error.code + " " + error.message);
+					}
+				});
+			}
+			
+			function sortTime() {
+				spinner.spin(target);
+				
+				// Table Query
+				var query = new Parse.Query(Parse.Object.extend("Music"));
+				query.equalTo("user", Parse.User.current().id);
+				query.ascending("time");
 				query.find({
 					success: function(results) {
 						
