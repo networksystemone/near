@@ -81,7 +81,7 @@
 		<!-- Jumbotron -->
 		<div class="jumbotron">
 			<div class="container">
-				<h1>Once place for all your music.</h1>
+				<h1>One place for all your music.</h1>
 				<p>Consolidate your music libraries with Near. Simply link SoundCloud, Spotify, YouTube, or other tracks to Near to keep all your audio in one convenient location.</p>
 				<p><a class="btn btn-success btn-lg" href="collection.php" role="button">Get started &raquo;</a></p>
 			</div>
@@ -170,27 +170,24 @@
 			
 			<!-- Details -->
 			<div class="row">
-				<div class="col-md-4">
-					<h2><span class="glyphicon glyphicon-leaf" aria-hidden="true"></span> Simple</h2>
-					<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-					<p><a class="btn btn-default" href="#" role="button">Learn more &raquo;</a></p>
+				<div class="col-md-3">
+					<h3>Compatible</h3>
+					<p>Near works with nearly every music streaming service. All you need is a track link to add your music to Near. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. Donec sed odio dui. Donec sed odio dui.</p>
 				</div>
-				<div class="col-md-4">
-					<h2><span class="glyphicon glyphicon-headphones" aria-hidden="true"></span> Accurate</h2>
-					<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-					<p><a class="btn btn-default" href="#" role="button">Learn more &raquo;</a></p>
+				<div class="col-md-3">
+					<h3>Accurate</h3>
+					<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
 				</div>
-				<div class="col-md-4">
-					<h2><span class="glyphicon glyphicon-usd" aria-hidden="true"></span> Free</h2>
-					<p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-					<p><a class="btn btn-default" href="#" role="button">Learn more &raquo;</a></p>
+				<div class="col-md-3">
+					<h3>Free</h3>
+					<p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
+				</div>
+				<div class="col-md-3">
+					<h3>Free</h3>
+					<p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
 				</div>
 			</div>
 			<br>
-		</div>
-		
-		<!-- Container -->
-		<div class="container">
 			
 			<!-- Breadcrumb -->
 			<ol class="breadcrumb">

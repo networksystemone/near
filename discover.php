@@ -242,7 +242,7 @@
 						</div>
 						<div class="media-body">
 							<h5 class="media-heading">Childish Gambino <span style="color: red;" class="glyphicon glyphicon-certificate" aria-hidden="true"></span></h4>
-							<spanclass="glyphicon glyphicon-user" aria-hidden="true"></span> 202,124
+							<span class="glyphicon glyphicon-user" aria-hidden="true"></span> 202,124
 						</div>
 					</div>
 					<br>

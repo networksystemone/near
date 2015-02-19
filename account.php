@@ -127,11 +127,6 @@
 					<p class="help-block">Please leave blank if you do not wish to change your password.</p>
 					<br>
 					
-					<!-- Biography -->
-					<label for="biography">Biography</label>
-					<textarea id="biography" class="form-control" rows="3" placeholder="Biography"></textarea>
-					<br>
-					
 					<!-- Save -->
 					<button class="btn btn-success" type="button" onclick="save()">Save</button>
 					<br>
@@ -186,7 +181,6 @@
 			document.getElementById("name").value = Parse.User.current().get("name");
 			document.getElementById("email").value = Parse.User.current().get("email");
 			document.getElementById("username").value = Parse.User.current().get("username");
-			document.getElementById("biography").value = Parse.User.current().get("biography");
 			
 			// Sign Out
 			function signOut() {
@@ -200,11 +194,15 @@
 				currentUser.set("name", document.getElementById("name").value);
 				currentUser.set("email", document.getElementById("email").value);
 				currentUser.set("username", document.getElementById("username").value);
-				currentUser.set("biography", document.getElementById("biography").value);
+				if (document.getElementById("password").value) currentUser.set("password", document.getElementById("password").value);
+				
 				currentUser.save();
 				
-				alert("Your preferences have been saved.")
+				alert("Your preferences have been saved.");
 				
+				Parse.User.current().refresh();
+				
+				// Doesn't work right
 				location.reload();
 			}
 			
