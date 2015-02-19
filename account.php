@@ -77,35 +77,67 @@
 			
 			<h1><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Account <small>Make changes to your Near account here.</small></h1>
 			<hr>
-			<img src="profile.jpg" class="img-thumbnail">
-			<br><br>
 			
-			<input id="name" type="text" class="form-control" placeholder="Name">
-			<br>
-			<input id="email" type="text" class="form-control" placeholder="Email">
-			<br>
-			<input id="username" type="text" class="form-control" placeholder="Username">
-			<br>
-			<input id="password" type="password" class="form-control" placeholder="Password">
-			<br>
-			<textarea id="biography" class="form-control" rows="3" placeholder="Biography"></textarea>
-			<br>
-			<button class="btn btn-success" type="button" onclick="save()">Save</button>
-			<hr>
-			
-			<!--
-			<p>Name: <script>document.write(Parse.User.current().get("name"));</script> <a href="#">(Edit)</a></p>
-			<p>Email: <script>document.write(Parse.User.current().get("email"));</script> <a href="#">(Edit)</a></p>
-			<p>Username: <script>document.write(Parse.User.current().get("username"));</script> <a href="#">(Edit)</a></p>
-			<p>Password: <a href="#">Change</a></p>
-			-->
-			
-			<button class="btn btn-default" type="button" onclick="signOut()">Sign Out</button>
-			<hr>
-			
-			<!-- Button trigger modal -->
-			<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deleteAccountModal">Delete Account</button>
-			<hr>
+			<div class="row">
+				<div class="col-md-2">
+					
+					<!-- Picture -->
+					<img src="profile.jpg" class="img-thumbnail">
+					<br><br>
+					
+					<!-- Change Picture -->
+					<button class="btn btn-default btn-block" type="button">Change Picture</button>
+					<br>
+					
+					<!-- Sign Out -->
+					<button class="btn btn-default btn-block" type="button" onclick="signOut()">Sign Out</button>
+					<br>
+					
+					<!-- Delete Account -->
+					<button class="btn btn-danger btn-block" type="button" data-toggle="modal" data-target="#deleteAccountModal">Delete Account</button>
+				</div>
+				<div class="col-md-10">
+					
+					<!-- Name -->
+					<div class="input-group">
+						<span class="input-group-addon">Name</span>
+						<input id="name" type="text" class="form-control" placeholder="Username">
+					</div>
+					<br>
+					
+					<!-- Email -->
+					<div class="input-group">
+						<span class="input-group-addon">Email</span>
+						<input id="email" type="text" class="form-control" placeholder="Email">
+					</div>
+					<br>
+					
+					<!-- Username -->
+					<div class="input-group">
+						<span class="input-group-addon">Username</span>
+						<input id="username" type="text" class="form-control" placeholder="Username">
+					</div>
+					<br>
+					
+					<!-- Password -->
+					<div class="input-group">
+						<span class="input-group-addon">Password</span>
+						<input id="password" type="password" class="form-control" placeholder="Password">
+					</div>
+					<p class="help-block">Please leave blank if you do not wish to change your password.</p>
+					<br>
+					
+					<!-- Biography -->
+					<label for="biography">Biography</label>
+					<textarea id="biography" class="form-control" rows="3" placeholder="Biography"></textarea>
+					<br>
+					
+					<!-- Save -->
+					<button class="btn btn-success" type="button" onclick="save()">Save</button>
+					<br>
+					<br>
+				</div>
+			</div>
 			
 			<!-- Breadcrumb -->
 			<ol class="breadcrumb">
@@ -154,7 +186,6 @@
 			document.getElementById("name").value = Parse.User.current().get("name");
 			document.getElementById("email").value = Parse.User.current().get("email");
 			document.getElementById("username").value = Parse.User.current().get("username");
-			document.getElementById("password").value = "password";
 			document.getElementById("biography").value = Parse.User.current().get("biography");
 			
 			// Sign Out

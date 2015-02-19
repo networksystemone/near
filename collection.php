@@ -11,7 +11,11 @@
 		
 		<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 		
+		<!-- Parse -->
 		<script src="//www.parsecdn.com/js/parse-1.3.4.min.js"></script>
+		
+		<!-- Spin.js -->
+		<script src="//fgnass.github.io/spin.js/spin.min.js"></script>
 		
 		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 		<!--[if lt IE 9]>
@@ -135,6 +139,10 @@
 						-->
 						</tbody>
 					</table>
+					
+					<!-- Spinner -->
+					<div id="spinner"></div>
+					
 				</div>
 				<div class="col-md-3">
 					
@@ -321,7 +329,8 @@
 			if (!Parse.User.current()) {
 				window.location.replace("signin.php");
 			}
-		
+			
+			// Validate Link (Unused)
 			function validateLink(link) {
 				var request = new XMLHttpRequest();  
 				request.open('GET', link, true);
@@ -360,9 +369,33 @@
 				});
 			}
 			
+			// Spinner
+			var opts = {
+				lines: 13, // The number of lines to draw
+				length: 14, // The length of each line
+				width: 6, // The line thickness
+				radius: 17, // The radius of the inner circle
+				corners: 1, // Corner roundness (0..1)
+				rotate: 0, // The rotation offset
+				direction: 1, // 1: clockwise, -1: counterclockwise
+				color: '#000', // #rgb or #rrggbb or array of colors
+				speed: 1, // Rounds per second
+				trail: 60, // Afterglow percentage
+				shadow: false, // Whether to render a shadow
+				hwaccel: false, // Whether to use hardware acceleration
+				className: 'spinner', // The CSS class to assign to the spinner
+				zIndex: 2e9, // The z-index (defaults to 2000000000)
+				top: '50%', // Top position relative to parent
+				left: '50%' // Left position relative to parent
+			};
+			var target = document.getElementById("spinner");
+			var spinner = new Spinner(opts);
+			
 			sortAdded();
 			
 			function sortAdded() {
+				spinner.spin(target);
+				
 				// Table Query
 				var query = new Parse.Query(Parse.Object.extend("Music"));
 				query.equalTo("user", Parse.User.current().id);
@@ -370,8 +403,9 @@
 				query.find({
 					success: function(results) {
 						
-						var count = results.length;
-						document.getElementById("details").innerHTML = count + " tracks"
+						spinner.stop();
+						
+						document.getElementById("details").innerHTML = results.length + " tracks"
 						document.getElementById("myTable").innerHTML = "";
 						for (var i = 0; i < results.length; i++) { 
 							var object = results[i];
@@ -383,18 +417,25 @@
 						}
 					},
 					error: function(error) {
+						spinner.stop();
+						
 						alert("Error: " + error.code + " " + error.message);
 					}
 				});
 			}
 			
 			function sortAlbum() {
+				spinner.spin(target);
+				
 				// Table Query
 				var query = new Parse.Query(Parse.Object.extend("Music"));
 				query.equalTo("user", Parse.User.current().id);
 				query.ascending("album");
 				query.find({
 					success: function(results) {
+						
+						spinner.stop();
+						
 						document.getElementById("myTable").innerHTML = "";
 						for (var i = 0; i < results.length; i++) { 
 							var object = results[i];
@@ -406,18 +447,25 @@
 						}
 					},
 					error: function(error) {
+						spinner.stop();
+						
 						alert("Error: " + error.code + " " + error.message);
 					}
 				});
 			}
 			
 			function sortArtist() {
+				spinner.spin(target);
+				
 				// Table Query
 				var query = new Parse.Query(Parse.Object.extend("Music"));
 				query.equalTo("user", Parse.User.current().id);
 				query.ascending("artist");
 				query.find({
 					success: function(results) {
+						
+						spinner.stop();
+						
 						document.getElementById("myTable").innerHTML = "";
 						for (var i = 0; i < results.length; i++) { 
 							var object = results[i];
@@ -429,18 +477,25 @@
 						}
 					},
 					error: function(error) {
+						spinner.stop();
+						
 						alert("Error: " + error.code + " " + error.message);
 					}
 				});
 			}
 			
 			function sortName() {
+				spinner.spin(target);
+				
 				// Table Query
 				var query = new Parse.Query(Parse.Object.extend("Music"));
 				query.equalTo("user", Parse.User.current().id);
 				query.ascending("name");
 				query.find({
 					success: function(results) {
+						
+						spinner.stop();
+						
 						document.getElementById("myTable").innerHTML = "";
 						for (var i = 0; i < results.length; i++) { 
 							var object = results[i];
@@ -452,6 +507,8 @@
 						}
 					},
 					error: function(error) {
+						spinner.stop();
+						
 						alert("Error: " + error.code + " " + error.message);
 					}
 				});

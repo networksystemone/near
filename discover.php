@@ -138,20 +138,20 @@
 			<div class="btn-group">
 				<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Trending <span class="caret"></span></button>
 				<ul class="dropdown-menu" role="menu">
-					<li class="active"><a href="#">Trending</a></li>
-					<script>if (Parse.User.current()) document.write('<li><a href="#">Recommendations</a></li>');</script>
+					<li class="active"><a href="">Trending</a></li>
+					<script>if (Parse.User.current()) document.write('<li><a href="?s=recommendations">Recommendations</a></li>');</script>
 					<li class="divider"></li>
-					<li><a href="#">Alternative Rock</a></li>
-					<li><a href="#">Dance & EDM</a></li>
-					<li><a href="#">Dubstep</a></li>
-					<li><a href="#">Hip-Hop & Rap</a></li>
-					<li><a href="#">House</a></li>
-					<li><a href="#">Indie</a></li>
-					<li><a href="#">Metal</a></li>
-					<li><a href="#">Pop</a></li>
-					<li><a href="#">R&B & Soul</a></li>
-					<li><a href="#">Reggae</a></li>
-					<li><a href="#">Rock</a></li>
+					<li><a href="?s=alternativerock">Alternative Rock</a></li>
+					<li><a href="?s=danceedm">Dance & EDM</a></li>
+					<li><a href="?s=dubstep">Dubstep</a></li>
+					<li><a href="?s=hiphoprap">Hip-Hop & Rap</a></li>
+					<li><a href="?s=house">House</a></li>
+					<li><a href="?s=indie">Indie</a></li>
+					<li><a href="?s=metal">Metal</a></li>
+					<li><a href="?s=pop">Pop</a></li>
+					<li><a href="?s=rbsoul">R&B & Soul</a></li>
+					<li><a href="?s=reggae">Reggae</a></li>
+					<li><a href="?s=rock">Rock</a></li>
 				</ul>
 			</div>
 			<br>
@@ -182,6 +182,14 @@
 					<h4>No Role Modelz <small>J. Cole</small></h4>
 					<iframe src="https://embed.spotify.com/?uri=spotify:track:62vpWI1CHwFy7tMIcSStl8" width="100%" height="80" frameborder="0" allowtransparency="true"></iframe>
 					<hr>
+					
+					<nav>
+						<ul class="pager">
+							<li class="previous disabled"><a href="#"><span aria-hidden="true">&larr;</span> Previous</a></li>
+							<li class="next"><a href="#">Next <span aria-hidden="true">&rarr;</span></a></li>
+						</ul>
+					</nav>
+					
 				</div>
 				<div class="col-md-3">
 					<input id="name" type="text" class="form-control" placeholder="Search">
