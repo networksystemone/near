@@ -78,10 +78,6 @@
 				<h1>Sign Up</h1>
 				<br>
 				
-				<p>Near is free and always will be.</p>
-				
-				<br>
-				
 				<div class="row">
 					<div class="col-md-4">
 					</div>
@@ -99,12 +95,9 @@
 							<div class="form-group">
 								<input type="password" class="form-control" id="password" placeholder="Password">
 							</div>
-							<div class="checkbox">
-								<label>
-									<input type="checkbox"> Agree to Near terms of service
-								</label>
-							</div>
 							<button type="button" class="btn btn-success btn-block" onclick="signUp()">Sign Up</button>
+							<br>
+							<span>By selecting Sign Up, you agree to the Near <a href="#">terms</a>.</span>
 						</form>
 					</div>
 					<div class="col-md-4">
@@ -136,25 +129,32 @@
 				
 				// Sign Up
 				function signUp() {
-					var user = new Parse.User();
-					user.set("name", document.getElementById("name").value);
-					user.set("email", document.getElementById("email").value);
-					user.set("username", document.getElementById("username").value);
-					user.set("password", document.getElementById("password").value);
-					user.signUp(null, {
-						success: function(user) {
-							alert("You have successfully signed up. Please check your email to verify your email account.");
-							window.location.replace("collection.php");
-						},
-						error: function(user, error) {
-							alert("Error: " + error.code + " " + error.message);
-						}
-					});
+					if (document.getElementById("name").value && document.getElementById("email").value && document.getElementById("username").value && document.getElementById("password").value) {
+						var user = new Parse.User();
+						user.set("name", document.getElementById("name").value);
+						user.set("email", document.getElementById("email").value);
+						user.set("username", document.getElementById("username").value);
+						user.set("password", document.getElementById("password").value);
+						user.signUp(null, {
+							success: function(user) {
+								alert("You have successfully signed up. Please check your email to verify your email account.");
+								window.location.replace("collection.php");
+							},
+							error: function(user, error) {
+								alert("Error: " + error.code + " " + error.message);
+							}
+						});
+					} else {
+						alert("You must fill out all fields before signing up.");
+					}
 				}
 			}
 		</script>
 		
+		<!-- jQuery -->
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+		
+		<!-- Bootstrap -->
 		<script src="bootstrap/js/bootstrap.min.js"></script>
 	</body>
 </html>

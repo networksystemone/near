@@ -90,9 +90,9 @@
 						
 						<br>
 						
-						<p><a href="#">Forgot?</a></p>
-						
-						<p>Don't have an account? <a href="signup.php">Sign Up</a></p>
+						<span><a href="#">Forgot?</a></span>
+						<br><br>
+						<span>Don't have an account? <a href="signup.php">Sign Up</a></span>
 					</div>
 					<div class="col-md-4">
 					</div>
@@ -140,7 +140,10 @@
 			}
 		</script>
 		
+		<!-- jQuery -->
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+		
+		<!-- Bootstrap -->
 		<script src="bootstrap/js/bootstrap.min.js"></script>
 	</body>
 </html>

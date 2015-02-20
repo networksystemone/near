@@ -9,8 +9,10 @@
 		
 		<title>Discover - Near</title>
 		
+		<!-- Bootstrap -->
 		<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 		
+		<!-- Parse -->
 		<script src="//www.parsecdn.com/js/parse-1.3.4.min.js"></script>
 		
 		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -27,6 +29,7 @@
 		
 	</head>
 	<body>
+		
 		<!-- Navigation -->
 		<nav class="navbar navbar-inverse navbar-fixed-top">
 			<div class="container">
@@ -128,7 +131,7 @@
 		
 		<br>
 		
-		<!-- Content -->
+		<!-- Container -->
 		<div class="container">
 			
 			<!-- Title -->
@@ -172,32 +175,29 @@
 			<br>
 			
 			<div class="row">
+				
+				<!-- Main -->
 				<div class="col-md-9">
 					
-					
 					<hr>
-					<div class="row">
-						<div class="col-md-9">
-							<h4><span style="color: red;" class="glyphicon glyphicon-fire" aria-hidden="true"></span> <span style="color: red;">Fire</span> Throw Sum Mo (feat. Nicki Minaj & Young Thug) <small>Rae Sremmurd</small></h4>
-						</div>
-						<div class="col-md-3">
-							<p class="text-right"><small><span class="glyphicon glyphicon-play" aria-hidden="true"></span> 8,929 &nbsp; <span class="glyphicon glyphicon-cloud-download" aria-hidden="true"></span> 4,980 &nbsp; <span class="glyphicon glyphicon-comment" aria-hidden="true"></span> 719</small></p>
-						</div>
-					</div>
-					
+					<h4><span style="color: red;" class="glyphicon glyphicon-fire" aria-hidden="true"></span> <span style="color: red;">Fire</span> Throw Sum Mo (feat. Nicki Minaj & Young Thug) <small>Rae Sremmurd</small></h4>
 					<iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/181305899&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
 					
 					<hr>
 					<h4><span style="color: red;" class="glyphicon glyphicon-fire" aria-hidden="true"></span> <span style="color: red;">Fire</span> CoCo <small>O.T. Genasis</small></h4>
 					<iframe src="https://embed.spotify.com/?uri=spotify:track:2JI71GHwq2LN8mtq3iCLYo" width="100%" height="80" frameborder="0" allowtransparency="true"></iframe>
+					
 					<hr>
 					<h4><span style="color: orange;" class="glyphicon glyphicon-fire" aria-hidden="true"></span> <span style="color: orange;">Hot</span> I Don't Mind (feat. Juicy J) <small>Usher</small></h4>
 					<iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/170339902&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+					
 					<hr>
 					<h4>No Role Modelz <small>J. Cole</small></h4>
 					<iframe src="https://embed.spotify.com/?uri=spotify:track:62vpWI1CHwFy7tMIcSStl8" width="100%" height="80" frameborder="0" allowtransparency="true"></iframe>
+					
 					<hr>
 					
+					<!-- Pager -->
 					<nav>
 						<ul class="pager">
 							<li class="previous disabled"><a href="#"><span aria-hidden="true">&larr;</span> Next</a></li>
@@ -206,6 +206,8 @@
 					</nav>
 					
 				</div>
+				
+				<!-- Side -->
 				<div class="col-md-3">
 					<input id="name" type="text" class="form-control" placeholder="Search">
 					
@@ -278,7 +280,10 @@
 			</footer>
 		</div>
 		
+		<!-- jQuery -->
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+		
+		<!-- Bootstrap -->
 		<script src="bootstrap/js/bootstrap.min.js"></script>
 	</body>
 </html>

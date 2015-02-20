@@ -9,8 +9,10 @@
 		
 		<title>Account - Near</title>
 		
+		<!-- Bootstrap -->
 		<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 		
+		<!-- Parse -->
 		<script src="//www.parsecdn.com/js/parse-1.3.4.min.js"></script>
 		
 		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -22,6 +24,10 @@
 		<style>
 			body {
 				padding-top: 50px;
+			}
+			.input-group-addon {
+				min-width: 90px;
+				text-align: left;
 			}
 		</style>
 		
@@ -97,7 +103,7 @@
 					<button class="btn btn-danger btn-block" type="button" data-toggle="modal" data-target="#deleteAccountModal">Delete Account</button>
 					<br>
 				</div>
-				<div class="col-md-10">
+				<div class="col-md-6">
 					
 					<!-- Name -->
 					<div class="input-group">
@@ -125,13 +131,15 @@
 						<span class="input-group-addon">Password</span>
 						<input id="password" type="password" class="form-control" placeholder="Password">
 					</div>
-					<p class="help-block">Please leave blank if you do not wish to change your password.</p>
+					<p class="help-block">Leave blank if you do not wish to change your password.</p>
 					<br>
 					
 					<!-- Save -->
 					<button class="btn btn-success" type="button" onclick="save()">Save</button>
 					<br>
 					<br>
+				</div>
+				<div class="col-md-4">
 				</div>
 			</div>
 			
@@ -223,7 +231,10 @@
 		
 		</script>
 		
+		<!-- jQuery -->
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+		
+		<!-- Bootstrap -->
 		<script src="bootstrap/js/bootstrap.min.js"></script>
 	</body>
 </html>

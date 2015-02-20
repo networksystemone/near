@@ -34,20 +34,27 @@
 		<nav class="navbar navbar-inverse navbar-fixed-top">
 			<div class="container">
 				<div class="navbar-header">
+					
+					<!-- Toggle -->
 					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
 						<span class="sr-only">Toggle navigation</span>
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
+					
+					<!-- Brand -->
 					<a class="navbar-brand" href="index.php">Near</a>
 				</div>
 				<div id="navbar" class="collapse navbar-collapse">
+					
+					<!-- Left Links -->
 					<ul class="nav navbar-nav">
 						<li><a href="collection.php">Collection</a></li>
 						<li><a href="discover.php">Discover</a></li>
 					</ul>
 					
+					<!-- Right Links -->
 					<ul class="nav navbar-nav navbar-right">
 						<script>
 							Parse.initialize("uH37tzThA3MpgQL4KQ7fOr5OzkXGpvTxr3Zk4Kbu", "3f80eW7OWD4U8h7URD4iYdQ0TvKHSgIha1AahgHq");
@@ -82,8 +89,8 @@
 		<div class="jumbotron">
 			<div class="container">
 				<h1>One place for all your music.</h1>
-				<p>Consolidate your music libraries with Near. Simply link SoundCloud, Spotify, YouTube, or other tracks to Near to keep all your audio in one convenient location.</p>
-				<p><a class="btn btn-success btn-lg" href="collection.php" role="button">Get started &raquo;</a></p>
+				<p>Consolidate your music libraries with Near. Simply link SoundCloud, Spotify, YouTube, or other tracks to Near to keep all your audio in one convenient location. Give Near a try today! It's <b>free</b>.</p>
+				<p><a class="btn btn-success btn-lg" href="collection.php" role="button">Get Started &raquo;</a></p>
 			</div>
 		</div>
 		
@@ -95,25 +102,28 @@
 				<div class="col-md-4">
 					<h2><span class="glyphicon glyphicon-leaf" aria-hidden="true"></span> Simple</h2>
 					<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-					<p><a class="btn btn-default" href="#" role="button">Learn more &raquo;</a></p>
+					<p><a class="btn btn-default" href="#" role="button">Learn More &raquo;</a></p>
 				</div>
 				<div class="col-md-4">
 					<h2><span class="glyphicon glyphicon-headphones" aria-hidden="true"></span> Accurate</h2>
 					<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-					<p><a class="btn btn-default" href="#" role="button">Learn more &raquo;</a></p>
+					<p><a class="btn btn-default" href="#" role="button">Learn More &raquo;</a></p>
 				</div>
 				<div class="col-md-4">
 					<h2><span class="glyphicon glyphicon-usd" aria-hidden="true"></span> Free</h2>
 					<p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-					<p><a class="btn btn-default" href="#" role="button">Learn more &raquo;</a></p>
+					<p><a class="btn btn-default" href="#" role="button">Learn More &raquo;</a></p>
 				</div>
 			</div>
 			<br>
+			<div class="well">
+				<img src="screenshot.png" width="100%">
+			</div>
 		</div>
 			
-		<!-- Carousel -->
+		<!--
 		<div id="carousel-example-generic" class="carousel slide" data-ride="carousel" data-interval="5000">
-			<!-- Indicators -->
+			
 			<ol class="carousel-indicators">
 				<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
 				<li data-target="#carousel-example-generic" data-slide-to="1"></li>
@@ -121,7 +131,7 @@
 				<li data-target="#carousel-example-generic" data-slide-to="3"></li>
 			</ol>
 			
-			<!-- Wrapper for slides -->
+			
 			<div class="carousel-inner">
 				<div class="item active">
 					<img src="drake-2.jpeg">
@@ -153,17 +163,14 @@
 				</div>
 			</div>
 			
-			<!-- Controls -->
+			
 			<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
 				<span class="glyphicon glyphicon-chevron-left"></span>
 			</a>
 			<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
 				<span class="glyphicon glyphicon-chevron-right"></span>
 			</a>
-		</div>
-		
-		
-		<br>
+		</div> -->
 		
 		<!-- Container -->
 		<div class="container">
