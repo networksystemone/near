@@ -296,8 +296,11 @@
 						<p>Added: February 12, 2015</p>
 						<p>Public: Yes</p>
 						<hr>
-						<p><a href="//genius.com" target="blank">Genius</a></p>
-						<p><a href="//itunes.com" target="blank">iTunes</a></p>
+						<div class="btn-group btn-group-sm" role="group">
+							<button type="button" class="btn btn-default">Wikipedia</button>
+							<button type="button" class="btn btn-default">Genius</button>
+							<button type="button" class="btn btn-default">iTunes</button>
+						</div>
 						<hr>
 						<!-- AddThis -->
 						<div class="addthis_native_toolbox"></div>
