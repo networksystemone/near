@@ -1,31 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="description" content="">
 		<meta name="author" content="">
 		
 		<title>Discover - Near</title>
 		
-		<!-- Bootstrap -->
-		<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
-		
-		<!-- Parse -->
-		<script src="//www.parsecdn.com/js/parse-1.3.4.min.js"></script>
-		
-		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-		<!--[if lt IE 9]>
-		<script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-		<script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-		<![endif]-->
-		
-		<style>
-			body {
-				padding-top: 50px;
-			}
-		</style>
+		<?php
+			include("template.php");
+		?>
 		
 	</head>
 	<body>
@@ -63,11 +46,11 @@
 						<li class="dropdown">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">More <span class="caret"></span></a>
 							<ul class="dropdown-menu" role="menu">
-								<li><a href="#">Company</a></li>
+								<li><a href="#companyModal" data-toggle="modal" data-target="#companyModal">Company</a></li>
 								<li class="divider"></li>
-								<li><a href="#">Downloads</a></li>
-								<li><a href="#">Blog</a></li>
-								<li><a href="#">Careers</a></li>
+								<li><a href="#downloadsModal" data-toggle="modal" data-target="#downloadsModal">Downloads</a></li>
+								<li><a href="//figure-near.tumblr.com" target="blank">Blog</a></li>
+								<li><a href="#careersModal" data-toggle="modal" data-target="#careersModal">Careers</a></li>
 								<li class="divider"></li>
 								<li><a href="#">Forums</a></li>
 								<li><a href="#">Help Center</a></li>
@@ -77,9 +60,11 @@
 				</div>
 			</div>
 		</nav>
+		<!-- /Navigation -->
 		
 		<!-- Carousel -->
 		<div id="carousel-example-generic" class="carousel slide" data-ride="carousel" data-interval="5000">
+			
 			<!-- Indicators -->
 			<ol class="carousel-indicators">
 				<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
@@ -87,38 +72,40 @@
 				<li data-target="#carousel-example-generic" data-slide-to="2"></li>
 				<li data-target="#carousel-example-generic" data-slide-to="3"></li>
 			</ol>
+			<!-- /Indicators -->
 			
-			<!-- Wrapper for slides -->
+			<!-- Slides -->
 			<div class="carousel-inner">
 				<div class="item active">
-					<img src="drake-2.jpeg">
+					<img src="images/drake.jpeg">
 					<div class="carousel-caption">
 						<h3>Drake Is Getting "Rich Off A Mixtape" for the Second Time</h3>
 						<p>If You're Reading This It's Too Late is even breaking Spotify records.</p>
 					</div>
 				</div>
 				<div class="item">
-					<img src="tyga.jpeg">
+					<img src="images/tyga.jpeg">
 					<div class="carousel-caption">
 						<h3>Chris Brown and Tyga Hope You "Remember" This New Single</h3>
 						<p>Listen to "Remember Me" as you prep for Fan Of A Fan 2.</p>
 					</div>
 				</div>
 				<div class="item">
-					<img src="drake-2.jpeg">
+					<img src="images/drake.jpeg">
 					<div class="carousel-caption">
 						<h3>Drake Is Getting "Rich Off A Mixtape" for the Second Time</h3>
 						<p>If You're Reading This It's Too Late is even breaking Spotify records.</p>
 					</div>
 				</div>
 				<div class="item">
-					<img src="tyga.jpeg">
+					<img src="images/tyga.jpeg">
 					<div class="carousel-caption">
 						<h3>Chris Brown and Tyga Hope You "Remember" This New Single</h3>
 						<p>Listen to "Remember Me" as you prep for Fan Of A Fan 2.</p>
 					</div>
 				</div>
 			</div>
+			<!-- /Slides -->
 			
 			<!-- Controls -->
 			<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
@@ -128,8 +115,8 @@
 				<span class="glyphicon glyphicon-chevron-right"></span>
 			</a>
 		</div>
-		
 		<br>
+		<!-- /Carousel -->
 		
 		<!-- Container -->
 		<div class="container">
@@ -137,7 +124,9 @@
 			<!-- Title -->
 			<h1><span class="glyphicon glyphicon-certificate" aria-hidden="true"></span> Discover <small>Find the hottest tracks and personalized recommendations.</small></h1>
 			<br>
+			<!-- /Title -->
 			
+			<!-- Category -->
 			<?php
 				if      (!$_GET["s"])                     $title = "Trending";
 				else if ($_GET["s"] == "alternativerock") $title = "Alternative Rock";
@@ -173,7 +162,9 @@
 				</ul>
 			</div>
 			<br>
+			<!-- /Category -->
 			
+			<!-- Row -->
 			<div class="row">
 				
 				<!-- Main -->
@@ -209,10 +200,13 @@
 				
 				<!-- Side -->
 				<div class="col-md-3">
-					<input id="name" type="text" class="form-control" placeholder="Search">
 					
+					<!-- Search -->
+					<input id="search" type="text" class="form-control" placeholder="Search" onchange="search()">
 					<br>
+					<!-- /Search -->
 					
+					<!-- Who to Follow -->
 					<h4>Who to Follow</h4>
 					
 					<div class="media">
@@ -263,27 +257,35 @@
 						</div>
 					</div>
 					<br>
-					<div class="well" style="height: 243px;"></div>
+					<!-- /Who to Follow -->
+					
+					<!-- Advertisement -->
+					<div class="well" style="height: 243px;">
+					</div>
+					<!-- /Advertisement -->
+					
 				</div>
+				<!-- /Side -->
+				
 			</div>
-			
-			<!-- Breadcrumb -->
-			<ol class="breadcrumb">
-				<li><a href="index.php">Home</a></li>
-				<li class="active">Discover</li>
-			</ol>
+			<!-- /Row -->
 			
 			<!-- Footer -->
-			<hr>
+			<hr style="margin-top: 0px;">
 			<footer>
 				<p>&copy; 2015 Figure Inc. &middot; Made in Seattle &middot; <a href="#">Company</a> &middot; <a href="#">Downloads</a> &middot; <a href="#">Blog &middot; <a href="#">Careers</a> &middot; <a href="#">Forums</a> &middot; <a href="#">Help Center</a></p>
 			</footer>
+			<!-- /Footer -->
+			
 		</div>
 		
-		<!-- jQuery -->
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+		<script>
 		
-		<!-- Bootstrap -->
-		<script src="bootstrap/js/bootstrap.min.js"></script>
+			function search() {
+				window.location.replace("search.php?q=" + document.getElementById("search").value);
+			}
+		
+		</script>
+		
 	</body>
 </html>

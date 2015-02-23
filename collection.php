@@ -1,41 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="description" content="">
 		<meta name="author" content="">
 		
 		<title>Collection - Near</title>
 		
-		<!-- Bootstrap -->
-		<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
-		
-		<!-- Parse -->
-		<script src="//www.parsecdn.com/js/parse-1.3.4.min.js"></script>
-		
-		<!-- Spin.js -->
-		<script src="//fgnass.github.io/spin.js/spin.min.js"></script>
-		
-		<!-- AddThis -->
-		<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-54e467f74da914f3" async="async"></script>
-		
-		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-		<!--[if lt IE 9]>
-		<script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-		<script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-		<![endif]-->
-		
 		<style>
-			body {
-				padding-top: 50px;
-			}
 			.input-group-addon {
 				min-width: 65px;
 				text-align: left;
 			}
+			
+			/* Responsive Table Mods */
+			/*table {
+				table-layout:fixed;
+			}
+			table td {
+				white-space: nowrap;
+				overflow: hidden;
+				text-overflow: ellipsis;
+			}*/
+			
+			.player {
+				position: fixed;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				background-color: silver;
+				/*height: 50px;*/
+				padding-top: 10px;
+				padding-bottom: 10px;
+				/*opacity: 0.9;*/
+				background-color: #F5F5F5;
+			}
 		</style>
+		
+		<?php
+			include("template.php");
+		?>
 		
 	</head>
 	<body>
@@ -44,20 +47,31 @@
 		<nav class="navbar navbar-inverse navbar-fixed-top">
 			<div class="container">
 				<div class="navbar-header">
+					
+					<!-- Toggle -->
 					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
 						<span class="sr-only">Toggle navigation</span>
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
+					<!-- /Toggle -->
+					
+					<!-- Brand -->
 					<a class="navbar-brand" href="index.php">Near</a>
+					<!-- /Brand -->
+					
 				</div>
 				<div id="navbar" class="collapse navbar-collapse">
+					
+					<!-- Left Links -->
 					<ul class="nav navbar-nav">
 						<li class="active"><a href="collection.php">Collection</a></li>
 						<li               ><a href="discover.php"  >Discover</a  ></li>
 					</ul>
+					<!-- /Left Links -->
 					
+					<!-- Right Links -->
 					<ul class="nav navbar-nav navbar-right">
 						
 						<script>
@@ -74,20 +88,23 @@
 						<li class="dropdown">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">More <span class="caret"></span></a>
 							<ul class="dropdown-menu" role="menu">
-								<li                ><a href="#">Company</a    ></li>
-								<li class="divider"                           ></li>
-								<li                ><a href="#">Downloads</a  ></li>
-								<li                ><a href="#">Blog</a       ></li>
-								<li                ><a href="#">Careers</a    ></li>
-								<li class="divider"                           ></li>
-								<li                ><a href="#">Forums</a     ></li>
-								<li                ><a href="#">Help Center</a></li>
+								<li><a href="#companyModal" data-toggle="modal" data-target="#companyModal">Company</a></li>
+								<li class="divider"></li>
+								<li><a href="#downloadsModal" data-toggle="modal" data-target="#downloadsModal">Downloads</a></li>
+								<li><a href="//figure-near.tumblr.com" target="blank">Blog</a></li>
+								<li><a href="#careersModal" data-toggle="modal" data-target="#careersModal">Careers</a></li>
+								<li class="divider"></li>
+								<li><a href="#">Forums</a></li>
+								<li><a href="#">Help Center</a></li>
 							</ul>
 						</li>
 					</ul>
+					<!-- /Right Links -->
+					
 				</div>
 			</div>
 		</nav>
+		<!-- /Navigation -->
 		
 		<!-- Container -->
 		<div class="container">
@@ -97,23 +114,18 @@
 			<div class="alert alert-warning" role="alert">
 				<strong>Warning!</strong> Near is in beta. Some features may not work properly.
 			</div>
+			<!-- /Warning -->
 			
 			<!-- Title -->
 			<h1><span class="glyphicon glyphicon-music" aria-hidden="true"></span> Collection <small>All your music in one place.</small></h1>
 			<br>
+			<!-- /Title -->
 			
 			<!-- Row -->
 			<div class="row">
 				
 				<!-- Main -->
-				<div class="col-md-9">
-					
-					<!-- Navigation -->
-					<ul class="nav nav-tabs">
-						<li role="presentation" class="active"  ><a href="#">All Tracks</a             ></li>
-						<li role="presentation" class="disabled"><a href="#">Playlists (Coming Soon)</a></li>
-					</ul>
-					<br>
+				<div class="col-md-10">
 					
 					<!-- Table -->
 					<table class="table table-hover table-condensed">
@@ -130,26 +142,31 @@
 								<th>Actions</th>
 							</tr>
 						</thead>
+						<!-- /Table Head -->
 						
 						<!-- Table Body -->
 						<tbody id="myTable">
 						</tbody>
+						<!-- /Table Body -->
+						
 					</table>
+					<!-- /Table -->
+				
 					
 					<!-- Spinner -->
 					<div id="spinner"></div>
+					<!-- /Spinner -->
 					
 				</div>
+				<!-- /Main -->
 				
 				<!-- Side -->
-				<div class="col-md-3">
+				<div class="col-md-2">
 					
 					<!-- Filter -->
-					<form>
-						<div class="form-group">
-							<input type="text" class="form-control" id="filter" placeholder="Filter">
-						</div>
-					</form>
+					<input type="text" class="form-control" placeholder="Filter" onchange="filter()">
+					<br>
+					<!-- /Filter -->
 					
 					<!-- Sort -->
 					<div class="btn-group">
@@ -163,10 +180,12 @@
 						</ul>
 					</div>
 					<br><br>
+					<!-- /Sort -->
 					
 					<!-- Add Track -->
 					<button type="button" class="btn btn-success btn-block" data-toggle="modal" data-target="#addModal"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Add Track</button>
 					<br>
+					<!-- /Add Track -->
 					
 					<!-- Share & Export -->
 					<div class="btn-group" role="group">
@@ -174,28 +193,33 @@
 						<button type="button" class="btn btn-default"><span class="glyphicon glyphicon-share-alt" aria-hidden="true"></span> Export</button>
 					</div>
 					<br><br>
+					<!-- /Share & Export -->
 					
 					<!-- Details -->
-					<span id="details">0 track(s)</span>
+					<span id="details">0 tracks</span>
 					<br><br>
+					<!-- /Details -->
 					
 					<!-- Advertisement -->
-					<div class="well" style="height: 243px;"></div>
+					<div class="well" style="height: 164px;">
+					</div>
+					<!-- /Advertisement -->
+					
 				</div>
+				<!-- /Side -->
+				
 			</div>
-			
-			<!-- Breadcrumb -->
-			<ol class="breadcrumb">
-				<li><a href="index.php">Home</a></li>
-				<li class="active">Collection</li>
-			</ol>
+			<!-- /Row -->
 			
 			<!-- Footer -->
 			<hr>
 			<footer>
 				<p>&copy; 2015 Figure Inc. &middot; Made in Seattle &middot; <a href="#">Company</a> &middot; <a href="#">Downloads</a> &middot; <a href="#">Blog &middot; <a href="#">Careers</a> &middot; <a href="#">Forums</a> &middot; <a href="#">Help Center</a></p>
 			</footer>
+			<!-- /Footer -->
+			
 		</div>
+		<!-- /Container -->
 		
 		
 		
@@ -247,6 +271,22 @@
 							<span class="input-group-addon">Time</span>
 							<input id="time" type="text" class="form-control" placeholder="Time">
 						</div>
+						<br>
+						
+						<p>Genre</p>
+						<select class="form-control">
+							<option>Alternative Rock</option>
+							<option>Dance & EDM</option>
+							<option>Dubstep</option>
+							<option>Hip-Hop & Rap</option>
+							<option>House</option>
+							<option>Indie</option>
+							<option>Metal</option>
+							<option>Pop</option>
+							<option>R&B & Soul</option>
+							<option>Reggae</option>
+							<option>Rock</option>
+						</select>
 						<br>
 						
 						<input type="checkbox" checked> Make track public
@@ -355,6 +395,22 @@
 						</div>
 						<br>
 						
+						<p>Genre</p>
+						<select class="form-control">
+							<option>Alternative Rock</option>
+							<option>Dance & EDM</option>
+							<option>Dubstep</option>
+							<option>Hip-Hop & Rap</option>
+							<option>House</option>
+							<option>Indie</option>
+							<option>Metal</option>
+							<option>Pop</option>
+							<option>R&B & Soul</option>
+							<option>Reggae</option>
+							<option>Rock</option>
+						</select>
+						<br>
+						
 						<input type="checkbox" checked> Make track public
 						<p class="help-block">Making a track public helps the Near community. <a href="#">Learn More</a></p>
 					</div>
@@ -435,7 +491,7 @@
 			function sortTitle() {
 				spinner.spin(target);
 				
-				var query = new Parse.Query(Parse.Object.extend("Music"));
+				var query = new Parse.Query(Parse.Object.extend("Track"));
 				query.equalTo("owner", Parse.User.current().id);
 				query.ascending("title");
 				query.find({
@@ -450,7 +506,7 @@
 							var date = new Date(object.createdAt);
 							var saved = date.getMonth() + "/" + date.getDate() + "/" + date.getFullYear();
 							
-							document.getElementById("myTable").innerHTML += '<tr><td><a role="button" class="btn btn-default btn-xs" href="' + object.get('link') + '" target="blank"> &nbsp; &nbsp; <span class="glyphicon glyphicon-play" aria-hidden="true"></span> &nbsp; &nbsp; </a></td><td>' + object.get('title') + '</td><td>' + object.get('artist') + '</td><td>' + object.get('album') + '</td><td>' + object.get('time') + '</td><td>' + saved + '</td><td><div class="btn-group btn-group-xs" role="group" aria-label="..."><button type="button" class="btn btn-default" data-toggle="modal" data-target="#informationModal"><span class="glyphicon glyphicon-stats" aria-hidden="true"></span></button><button type="button" class="btn btn-default" data-toggle="modal" data-target="#editModal"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></button><button type="button" class="btn btn-default" data-toggle="modal" data-target="#removeModal"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button></div></td></tr>';
+							document.getElementById("myTable").innerHTML += '<tr><td><a role="button" class="btn btn-default btn-xs" href="track.php?t=' + object.id + '"> &nbsp; &nbsp; <span class="glyphicon glyphicon-play" aria-hidden="true"></span> &nbsp; &nbsp; </a></td><td>' + object.get('title') + '</td><td>' + object.get('artist') + '</td><td>' + object.get('album') + '</td><td>' + object.get('time') + '</td><td>' + saved + '</td><td><div class="btn-group btn-group-xs" role="group" aria-label="..."><button type="button" class="btn btn-default" data-toggle="modal" data-target="#informationModal"><span class="glyphicon glyphicon-stats" aria-hidden="true"></span></button><button type="button" class="btn btn-default" data-toggle="modal" data-target="#editModal"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></button><button type="button" class="btn btn-default" data-toggle="modal" data-target="#removeModal"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button></div></td></tr>';
 						}
 					},
 					error: function(error) {
@@ -465,7 +521,7 @@
 			function sortArtist() {
 				spinner.spin(target);
 				
-				var query = new Parse.Query(Parse.Object.extend("Music"));
+				var query = new Parse.Query(Parse.Object.extend("Track"));
 				query.equalTo("owner", Parse.User.current().id);
 				query.ascending("artist");
 				query.find({
@@ -480,7 +536,7 @@
 							var date = new Date(object.createdAt);
 							var saved = date.getMonth() + "/" + date.getDate() + "/" + date.getFullYear();
 							
-							document.getElementById("myTable").innerHTML += '<tr><td><a role="button" class="btn btn-default btn-xs" href="' + object.get('link') + '" target="blank"> &nbsp; &nbsp; <span class="glyphicon glyphicon-play" aria-hidden="true"></span> &nbsp; &nbsp; </a></td><td>' + object.get('title') + '</td><td>' + object.get('artist') + '</td><td>' + object.get('album') + '</td><td>' + object.get('time') + '</td><td>' + saved + '</td><td><div class="btn-group btn-group-xs" role="group" aria-label="..."><button type="button" class="btn btn-default" data-toggle="modal" data-target="#informationModal"><span class="glyphicon glyphicon-stats" aria-hidden="true"></span></button><button type="button" class="btn btn-default" data-toggle="modal" data-target="#editModal"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></button><button type="button" class="btn btn-default" data-toggle="modal" data-target="#removeModal"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button></div></td></tr>';
+							document.getElementById("myTable").innerHTML += '<tr><td><a role="button" class="btn btn-default btn-xs" href="track.php?t=' + object.id + '"> &nbsp; &nbsp; <span class="glyphicon glyphicon-play" aria-hidden="true"></span> &nbsp; &nbsp; </a></td><td>' + object.get('title') + '</td><td>' + object.get('artist') + '</td><td>' + object.get('album') + '</td><td>' + object.get('time') + '</td><td>' + saved + '</td><td><div class="btn-group btn-group-xs" role="group" aria-label="..."><button type="button" class="btn btn-default" data-toggle="modal" data-target="#informationModal"><span class="glyphicon glyphicon-stats" aria-hidden="true"></span></button><button type="button" class="btn btn-default" data-toggle="modal" data-target="#editModal"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></button><button type="button" class="btn btn-default" data-toggle="modal" data-target="#removeModal"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button></div></td></tr>';
 						}
 					},
 					error: function(error) {
@@ -495,7 +551,7 @@
 			function sortAlbum() {
 				spinner.spin(target);
 				
-				var query = new Parse.Query(Parse.Object.extend("Music"));
+				var query = new Parse.Query(Parse.Object.extend("Track"));
 				query.equalTo("owner", Parse.User.current().id);
 				query.ascending("album");
 				query.find({
@@ -510,7 +566,7 @@
 							var date = new Date(object.createdAt);
 							var saved = date.getMonth() + "/" + date.getDate() + "/" + date.getFullYear();
 							
-							document.getElementById("myTable").innerHTML += '<tr><td><a role="button" class="btn btn-default btn-xs" href="' + object.get('link') + '" target="blank"> &nbsp; &nbsp; <span class="glyphicon glyphicon-play" aria-hidden="true"></span> &nbsp; &nbsp; </a></td><td>' + object.get('title') + '</td><td>' + object.get('artist') + '</td><td>' + object.get('album') + '</td><td>' + object.get('time') + '</td><td>' + saved + '</td><td><div class="btn-group btn-group-xs" role="group" aria-label="..."><button type="button" class="btn btn-default" data-toggle="modal" data-target="#informationModal"><span class="glyphicon glyphicon-stats" aria-hidden="true"></span></button><button type="button" class="btn btn-default" data-toggle="modal" data-target="#editModal"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></button><button type="button" class="btn btn-default" data-toggle="modal" data-target="#removeModal"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button></div></td></tr>';
+							document.getElementById("myTable").innerHTML += '<tr><td><a role="button" class="btn btn-default btn-xs" href="track.php?t=' + object.id + '"> &nbsp; &nbsp; <span class="glyphicon glyphicon-play" aria-hidden="true"></span> &nbsp; &nbsp; </a></td><td>' + object.get('title') + '</td><td>' + object.get('artist') + '</td><td>' + object.get('album') + '</td><td>' + object.get('time') + '</td><td>' + saved + '</td><td><div class="btn-group btn-group-xs" role="group" aria-label="..."><button type="button" class="btn btn-default" data-toggle="modal" data-target="#informationModal"><span class="glyphicon glyphicon-stats" aria-hidden="true"></span></button><button type="button" class="btn btn-default" data-toggle="modal" data-target="#editModal"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></button><button type="button" class="btn btn-default" data-toggle="modal" data-target="#removeModal"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button></div></td></tr>';
 						}
 					},
 					error: function(error) {
@@ -525,7 +581,7 @@
 			function sortTime() {
 				spinner.spin(target);
 				
-				var query = new Parse.Query(Parse.Object.extend("Music"));
+				var query = new Parse.Query(Parse.Object.extend("Track"));
 				query.equalTo("owner", Parse.User.current().id);
 				query.ascending("time");
 				query.find({
@@ -540,7 +596,7 @@
 							var date = new Date(object.createdAt);
 							var saved = date.getMonth() + "/" + date.getDate() + "/" + date.getFullYear();
 							
-							document.getElementById("myTable").innerHTML += '<tr><td><a role="button" class="btn btn-default btn-xs" href="' + object.get('link') + '" target="blank"> &nbsp; &nbsp; <span class="glyphicon glyphicon-play" aria-hidden="true"></span> &nbsp; &nbsp; </a></td><td>' + object.get('title') + '</td><td>' + object.get('artist') + '</td><td>' + object.get('album') + '</td><td>' + object.get('time') + '</td><td>' + saved + '</td><td><div class="btn-group btn-group-xs" role="group" aria-label="..."><button type="button" class="btn btn-default" data-toggle="modal" data-target="#informationModal"><span class="glyphicon glyphicon-stats" aria-hidden="true"></span></button><button type="button" class="btn btn-default" data-toggle="modal" data-target="#editModal"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></button><button type="button" class="btn btn-default" data-toggle="modal" data-target="#removeModal"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button></div></td></tr>';
+							document.getElementById("myTable").innerHTML += '<tr><td><a role="button" class="btn btn-default btn-xs" href="track.php?t=' + object.id + '"> &nbsp; &nbsp; <span class="glyphicon glyphicon-play" aria-hidden="true"></span> &nbsp; &nbsp; </a></td><td>' + object.get('title') + '</td><td>' + object.get('artist') + '</td><td>' + object.get('album') + '</td><td>' + object.get('time') + '</td><td>' + saved + '</td><td><div class="btn-group btn-group-xs" role="group" aria-label="..."><button type="button" class="btn btn-default" data-toggle="modal" data-target="#informationModal"><span class="glyphicon glyphicon-stats" aria-hidden="true"></span></button><button type="button" class="btn btn-default" data-toggle="modal" data-target="#editModal"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></button><button type="button" class="btn btn-default" data-toggle="modal" data-target="#removeModal"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button></div></td></tr>';
 						}
 					},
 					error: function(error) {
@@ -555,7 +611,7 @@
 			function sortSaved() {
 				spinner.spin(target);
 				
-				var query = new Parse.Query(Parse.Object.extend("Music"));
+				var query = new Parse.Query(Parse.Object.extend("Track"));
 				query.equalTo("owner", Parse.User.current().id);
 				query.descending("createdAt");
 				query.find({
@@ -563,7 +619,11 @@
 						
 						spinner.stop();
 						
-						document.getElementById("details").innerHTML = results.length + " track(s)";
+						if (results.length == 1) {
+							document.getElementById("details").innerHTML = results.length + " track";
+						} else {
+							document.getElementById("details").innerHTML = results.length + " tracks";
+						}
 						document.getElementById("myTable").innerHTML = "";
 						for (var i = 0; i < results.length; i++) { 
 							var object = results[i];
@@ -571,7 +631,7 @@
 							var date = new Date(object.createdAt);
 							var saved = date.getMonth() + "/" + date.getDate() + "/" + date.getFullYear();
 							
-							document.getElementById("myTable").innerHTML += '<tr><td><a role="button" class="btn btn-default btn-xs" href="' + object.get('link') + '" target="blank"> &nbsp; &nbsp; <span class="glyphicon glyphicon-play" aria-hidden="true"></span> &nbsp; &nbsp; </a></td><td>' + object.get('title') + '</td><td>' + object.get('artist') + '</td><td>' + object.get('album') + '</td><td>' + object.get('time') + '</td><td>' + saved + '</td><td><div class="btn-group btn-group-xs" role="group" aria-label="..."><button type="button" class="btn btn-default" data-toggle="modal" data-target="#informationModal"><span class="glyphicon glyphicon-stats" aria-hidden="true"></span></button><button type="button" class="btn btn-default" data-toggle="modal" data-target="#editModal"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></button><button type="button" class="btn btn-default" data-toggle="modal" data-target="#removeModal"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button></div></td></tr>';
+							document.getElementById("myTable").innerHTML += '<tr><td><a role="button" class="btn btn-default btn-xs" href="track.php?t=' + object.id + '"> &nbsp; &nbsp; <span class="glyphicon glyphicon-play" aria-hidden="true"></span> &nbsp; &nbsp; </a></td><td>' + object.get('title') + '</td><td>' + object.get('artist') + '</td><td>' + object.get('album') + '</td><td>' + object.get('time') + '</td><td>' + saved + '</td><td><div class="btn-group btn-group-xs" role="group" aria-label="..."><button type="button" class="btn btn-default" data-toggle="modal" data-target="#informationModal"><span class="glyphicon glyphicon-stats" aria-hidden="true"></span></button><button type="button" class="btn btn-default" data-toggle="modal" data-target="#editModal"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></button><button type="button" class="btn btn-default" data-toggle="modal" data-target="#removeModal"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button></div></td></tr>';
 						}
 					},
 					error: function(error) {
@@ -585,7 +645,7 @@
 			// Add Track
 			function addTrack() {
 				
-				var Extension = Parse.Object.extend("Music");
+				var Extension = Parse.Object.extend("Track");
 				var query = new Extension();
 				
 				query.set("owner", Parse.User.current().id);
@@ -604,13 +664,12 @@
 					}
 				});
 			}
+			
+			// Filter
+			function filter() {
+				alert("Filtering...");
+			}
 		</script>
-		
-		<!-- jQuery -->
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-		
-		<!-- Bootstrap -->
-		<script src="bootstrap/js/bootstrap.min.js"></script>
 		
 		<!-- Autofocus Workaround -->
 		<script>

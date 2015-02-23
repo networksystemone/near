@@ -1,30 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="description" content="">
 		<meta name="author" content="">
 		
 		<title>Account - Near</title>
 		
-		<!-- Bootstrap -->
-		<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
-		
-		<!-- Parse -->
-		<script src="//www.parsecdn.com/js/parse-1.3.4.min.js"></script>
-		
-		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-		<!--[if lt IE 9]>
-		<script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-		<script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-		<![endif]-->
+		<?php
+			include("template.php");
+		?>
 		
 		<style>
-			body {
-				padding-top: 50px;
-			}
 			.input-group-addon {
 				min-width: 90px;
 				text-align: left;
@@ -58,17 +44,17 @@
 					
 					<ul class="nav navbar-nav navbar-right">
 						<script>
-							document.write('<li><a href="account.php">' + Parse.User.current().get("name") + '</a></li>');
+							document.write('<li class="active"><a href="account.php">' + Parse.User.current().get("name") + '</a></li>');
 						</script>
 						
 						<li class="dropdown">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">More <span class="caret"></span></a>
 							<ul class="dropdown-menu" role="menu">
-								<li><a href="#">Company</a></li>
+								<li><a href="#companyModal" data-toggle="modal" data-target="#companyModal">Company</a></li>
 								<li class="divider"></li>
-								<li><a href="#">Downloads</a></li>
-								<li><a href="#">Blog</a></li>
-								<li><a href="#">Careers</a></li>
+								<li><a href="#downloadsModal" data-toggle="modal" data-target="#downloadsModal">Downloads</a></li>
+								<li><a href="//figure-near.tumblr.com" target="blank">Blog</a></li>
+								<li><a href="#careersModal" data-toggle="modal" data-target="#careersModal">Careers</a></li>
 								<li class="divider"></li>
 								<li><a href="#">Forums</a></li>
 								<li><a href="#">Help Center</a></li>
@@ -78,17 +64,22 @@
 				</div>
 			</div>
 		</nav>
+		<!-- /Navigation -->
 		
+		<!-- Container -->
 		<div class="container">
 			
+			<!-- Title -->
 			<h1><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Account <small>Make changes to your Near account here.</small></h1>
-			<hr>
+			<br>
+			<!-- /Title -->
 			
+			<!-- Row -->
 			<div class="row">
 				<div class="col-md-2">
 					
 					<!-- Picture -->
-					<img src="profile.jpg" class="img-thumbnail">
+					<img src="images/profile.jpg" class="img-thumbnail">
 					<br><br>
 					
 					<!-- Change Picture -->
@@ -101,7 +92,6 @@
 					
 					<!-- Delete Account -->
 					<button class="btn btn-danger btn-block" type="button" data-toggle="modal" data-target="#deleteAccountModal">Delete Account</button>
-					<br>
 				</div>
 				<div class="col-md-6">
 					
@@ -136,25 +126,21 @@
 					
 					<!-- Save -->
 					<button class="btn btn-success" type="button" onclick="save()">Save</button>
-					<br>
-					<br>
 				</div>
 				<div class="col-md-4">
 				</div>
 			</div>
-			
-			<!-- Breadcrumb -->
-			<ol class="breadcrumb">
-				<li><a href="index.php">Home</a></li>
-				<li class="active">Account</li>
-			</ol>
+			<!-- /Row -->
 			
 			<!-- Footer -->
 			<hr>
 			<footer>
 				<p>&copy; 2015 Figure Inc. &middot; Made in Seattle &middot; <a href="#">Company</a> &middot; <a href="#">Downloads</a> &middot; <a href="#">Blog &middot; <a href="#">Careers</a> &middot; <a href="#">Forums</a> &middot; <a href="#">Help Center</a></p>
 			</footer>
+			<!-- /Footer -->
+			
 		</div>
+		<!-- /Container -->
 		
 		<!-- ########## Modals ########## -->
 		
@@ -231,10 +217,5 @@
 		
 		</script>
 		
-		<!-- jQuery -->
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-		
-		<!-- Bootstrap -->
-		<script src="bootstrap/js/bootstrap.min.js"></script>
 	</body>
 </html>
