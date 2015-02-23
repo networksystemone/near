@@ -139,7 +139,7 @@
 								<th>Album</th>
 								<th>Time</th>
 								<th>Saved</th>
-								<th>Actions</th>
+								<th></th>
 							</tr>
 						</thead>
 						<!-- /Table Head -->
@@ -212,7 +212,7 @@
 			<!-- /Row -->
 			
 			<!-- Footer -->
-			<hr>
+			<hr style="margin-top: 0px;">
 			<footer>
 				<p>&copy; 2015 Figure Inc. &middot; Made in Seattle &middot; <a href="#">Company</a> &middot; <a href="#">Downloads</a> &middot; <a href="#">Blog &middot; <a href="#">Careers</a> &middot; <a href="#">Forums</a> &middot; <a href="#">Help Center</a></p>
 			</footer>
@@ -506,7 +506,7 @@
 							var date = new Date(object.createdAt);
 							var saved = date.getMonth() + "/" + date.getDate() + "/" + date.getFullYear();
 							
-							document.getElementById("myTable").innerHTML += '<tr><td><a role="button" class="btn btn-default btn-xs" href="track.php?t=' + object.id + '"> &nbsp; &nbsp; <span class="glyphicon glyphicon-play" aria-hidden="true"></span> &nbsp; &nbsp; </a></td><td>' + object.get('title') + '</td><td>' + object.get('artist') + '</td><td>' + object.get('album') + '</td><td>' + object.get('time') + '</td><td>' + saved + '</td><td><div class="btn-group btn-group-xs" role="group" aria-label="..."><button type="button" class="btn btn-default" data-toggle="modal" data-target="#informationModal"><span class="glyphicon glyphicon-stats" aria-hidden="true"></span></button><button type="button" class="btn btn-default" data-toggle="modal" data-target="#editModal"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></button><button type="button" class="btn btn-default" data-toggle="modal" data-target="#removeModal"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button></div></td></tr>';
+							document.getElementById("myTable").innerHTML += '<tr><td><a role="button" class="btn btn-default btn-xs" href="track.php?t=' + object.id + '"> &nbsp; &nbsp; <span class="glyphicon glyphicon-play" aria-hidden="true"></span> &nbsp; &nbsp; </a></td><td>' + object.get('title') + '</td><td>' + object.get('artist') + '</td><td>' + object.get('album') + '</td><td>' + object.get('time') + '</td><td>' + saved + '</td><td><button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#removeModal"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button></td></tr>';
 						}
 					},
 					error: function(error) {
@@ -536,7 +536,7 @@
 							var date = new Date(object.createdAt);
 							var saved = date.getMonth() + "/" + date.getDate() + "/" + date.getFullYear();
 							
-							document.getElementById("myTable").innerHTML += '<tr><td><a role="button" class="btn btn-default btn-xs" href="track.php?t=' + object.id + '"> &nbsp; &nbsp; <span class="glyphicon glyphicon-play" aria-hidden="true"></span> &nbsp; &nbsp; </a></td><td>' + object.get('title') + '</td><td>' + object.get('artist') + '</td><td>' + object.get('album') + '</td><td>' + object.get('time') + '</td><td>' + saved + '</td><td><div class="btn-group btn-group-xs" role="group" aria-label="..."><button type="button" class="btn btn-default" data-toggle="modal" data-target="#informationModal"><span class="glyphicon glyphicon-stats" aria-hidden="true"></span></button><button type="button" class="btn btn-default" data-toggle="modal" data-target="#editModal"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></button><button type="button" class="btn btn-default" data-toggle="modal" data-target="#removeModal"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button></div></td></tr>';
+							document.getElementById("myTable").innerHTML += '<tr><td><a role="button" class="btn btn-default btn-xs" href="track.php?t=' + object.id + '"> &nbsp; &nbsp; <span class="glyphicon glyphicon-play" aria-hidden="true"></span> &nbsp; &nbsp; </a></td><td>' + object.get('title') + '</td><td>' + object.get('artist') + '</td><td>' + object.get('album') + '</td><td>' + object.get('time') + '</td><td>' + saved + '</td><td><button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#removeModal"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button></td></tr>';
 						}
 					},
 					error: function(error) {
@@ -566,7 +566,7 @@
 							var date = new Date(object.createdAt);
 							var saved = date.getMonth() + "/" + date.getDate() + "/" + date.getFullYear();
 							
-							document.getElementById("myTable").innerHTML += '<tr><td><a role="button" class="btn btn-default btn-xs" href="track.php?t=' + object.id + '"> &nbsp; &nbsp; <span class="glyphicon glyphicon-play" aria-hidden="true"></span> &nbsp; &nbsp; </a></td><td>' + object.get('title') + '</td><td>' + object.get('artist') + '</td><td>' + object.get('album') + '</td><td>' + object.get('time') + '</td><td>' + saved + '</td><td><div class="btn-group btn-group-xs" role="group" aria-label="..."><button type="button" class="btn btn-default" data-toggle="modal" data-target="#informationModal"><span class="glyphicon glyphicon-stats" aria-hidden="true"></span></button><button type="button" class="btn btn-default" data-toggle="modal" data-target="#editModal"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></button><button type="button" class="btn btn-default" data-toggle="modal" data-target="#removeModal"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button></div></td></tr>';
+							document.getElementById("myTable").innerHTML += '<tr><td><a role="button" class="btn btn-default btn-xs" href="track.php?t=' + object.id + '"> &nbsp; &nbsp; <span class="glyphicon glyphicon-play" aria-hidden="true"></span> &nbsp; &nbsp; </a></td><td>' + object.get('title') + '</td><td>' + object.get('artist') + '</td><td>' + object.get('album') + '</td><td>' + object.get('time') + '</td><td>' + saved + '</td><td><button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#removeModal"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button></td></tr>';
 						}
 					},
 					error: function(error) {
@@ -596,7 +596,7 @@
 							var date = new Date(object.createdAt);
 							var saved = date.getMonth() + "/" + date.getDate() + "/" + date.getFullYear();
 							
-							document.getElementById("myTable").innerHTML += '<tr><td><a role="button" class="btn btn-default btn-xs" href="track.php?t=' + object.id + '"> &nbsp; &nbsp; <span class="glyphicon glyphicon-play" aria-hidden="true"></span> &nbsp; &nbsp; </a></td><td>' + object.get('title') + '</td><td>' + object.get('artist') + '</td><td>' + object.get('album') + '</td><td>' + object.get('time') + '</td><td>' + saved + '</td><td><div class="btn-group btn-group-xs" role="group" aria-label="..."><button type="button" class="btn btn-default" data-toggle="modal" data-target="#informationModal"><span class="glyphicon glyphicon-stats" aria-hidden="true"></span></button><button type="button" class="btn btn-default" data-toggle="modal" data-target="#editModal"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></button><button type="button" class="btn btn-default" data-toggle="modal" data-target="#removeModal"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button></div></td></tr>';
+							document.getElementById("myTable").innerHTML += '<tr><td><a role="button" class="btn btn-default btn-xs" href="track.php?t=' + object.id + '"> &nbsp; &nbsp; <span class="glyphicon glyphicon-play" aria-hidden="true"></span> &nbsp; &nbsp; </a></td><td>' + object.get('title') + '</td><td>' + object.get('artist') + '</td><td>' + object.get('album') + '</td><td>' + object.get('time') + '</td><td>' + saved + '</td><td><button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#removeModal"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button></td></tr>';
 						}
 					},
 					error: function(error) {
@@ -631,7 +631,7 @@
 							var date = new Date(object.createdAt);
 							var saved = date.getMonth() + "/" + date.getDate() + "/" + date.getFullYear();
 							
-							document.getElementById("myTable").innerHTML += '<tr><td><a role="button" class="btn btn-default btn-xs" href="track.php?t=' + object.id + '"> &nbsp; &nbsp; <span class="glyphicon glyphicon-play" aria-hidden="true"></span> &nbsp; &nbsp; </a></td><td>' + object.get('title') + '</td><td>' + object.get('artist') + '</td><td>' + object.get('album') + '</td><td>' + object.get('time') + '</td><td>' + saved + '</td><td><div class="btn-group btn-group-xs" role="group" aria-label="..."><button type="button" class="btn btn-default" data-toggle="modal" data-target="#informationModal"><span class="glyphicon glyphicon-stats" aria-hidden="true"></span></button><button type="button" class="btn btn-default" data-toggle="modal" data-target="#editModal"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></button><button type="button" class="btn btn-default" data-toggle="modal" data-target="#removeModal"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button></div></td></tr>';
+							document.getElementById("myTable").innerHTML += '<tr><td><a role="button" class="btn btn-default btn-xs" href="track.php?t=' + object.id + '"> &nbsp; &nbsp; <span class="glyphicon glyphicon-play" aria-hidden="true"></span> &nbsp; &nbsp; </a></td><td>' + object.get('title') + '</td><td>' + object.get('artist') + '</td><td>' + object.get('album') + '</td><td>' + object.get('time') + '</td><td>' + saved + '</td><td><button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#removeModal"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button></td></tr>';
 						}
 					},
 					error: function(error) {

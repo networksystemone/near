@@ -10,7 +10,6 @@
 			include("template.php");
 		?>
 		
-		
 	</head>
 	<body>
 		
@@ -24,6 +23,7 @@
 			fjs.parentNode.insertBefore(js, fjs);
 			}(document, 'script', 'facebook-jssdk'));
 		</script>
+		<!-- /Facebook -->
 		
 		<!-- Main Script -->
 		<script>
@@ -95,20 +95,25 @@
 				</div>
 			</div>
 		</nav>
+		<!-- /Navigation -->
 		
 		<!-- Container -->
 		<div class="container">
 			
+			<!-- Title -->
 			<h1 id="title"><span class="glyphicon glyphicon-cd" aria-hidden="true"></span></h1>
 			<br>
+			<!-- /Title -->
+			
+			<!-- Statistics -->
+			<p><span style="color: red;" class="glyphicon glyphicon-fire" aria-hidden="true"></span> <span style="color: red;">Fire</span> &nbsp; <span class="glyphicon glyphicon-play" aria-hidden="true"></span> 10,000 &nbsp; <span class="glyphicon glyphicon-star" aria-hidden="true"></span> 10,000 &nbsp; <span class="glyphicon glyphicon-comment" aria-hidden="true"></span> 10,000</p>
+			<!-- /Statistics -->
 			
 			<!-- Row -->
 			<div class="row">
 				
 				<!-- Main -->
 				<div class="col-md-10">
-					
-					<p><span style="color: red;" class="glyphicon glyphicon-fire" aria-hidden="true"></span> <span style="color: red;">Fire</span> &nbsp; <span class="glyphicon glyphicon-play" aria-hidden="true"></span> 10,000 &nbsp; <span class="glyphicon glyphicon-star" aria-hidden="true"></span> 10,000 &nbsp; <span class="glyphicon glyphicon-comment" aria-hidden="true"></span> 10,000</p>
 					
 					<div class="well">
 						<iframe width="100%" height="500px" src="https://www.youtube.com/embed/6AhXSoKa8xw?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
@@ -117,12 +122,24 @@
 					<!-- Facebook -->
 					<div class="fb-comments" data-href="http://developers.facebook.com/docs/plugins/comments/" data-width="100%" data-numposts="10" data-colorscheme="light"></div>
 				</div>
+				<!-- /Main -->
 				
 				<!-- Side -->
 				<div class="col-md-2">
+					
+					<!-- Save -->
 					<button type="button" class="btn btn-success btn-block"><span class="glyphicon glyphicon-star" aria-hidden="true"></span> Save</button>
 					<br>
+					<!-- /Save -->
+					
+					<!-- Share -->
 					<button type="button" class="btn btn-default btn-block"><span class="glyphicon glyphicon-share-alt" aria-hidden="true"></span> Share</button>
+					<br>
+					<!-- /Share -->
+					
+					<!-- Edit -->
+					<button type="button" class="btn btn-default btn-block"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Edit</button>
+					<!-- /Edit -->
 					
 					<hr>
 					<p>Owner: Kendrick Lamar (<a href="#">kendricklamar</a>)</p>
@@ -131,14 +148,20 @@
 					<p><a href="#">Genius</a></p>
 					<p><a href="#">iTunes</a></p>
 				</div>
+				<!-- /Side -->
+				
 			</div>
+			<!-- /Row -->
 			
 			<!-- Footer -->
 			<hr>
 			<footer>
 				<p>&copy; 2015 Figure Inc. &middot; Made in Seattle &middot; <a href="#">Company</a> &middot; <a href="#">Downloads</a> &middot; <a href="#">Blog &middot; <a href="#">Careers</a> &middot; <a href="#">Forums</a> &middot; <a href="#">Help Center</a></p>
 			</footer>
+			<!-- /Footer -->
+			
 		</div>
+		<!-- /Container -->
 		
 		<script>
 			
