@@ -164,7 +164,7 @@
 				<div class="col-md-2">
 					
 					<!-- Filter -->
-					<input type="text" class="form-control" placeholder="Filter" onchange="filter()">
+					<input id="filter" type="text" class="form-control" placeholder="Filter" onchange="filter()">
 					<br>
 					<!-- /Filter -->
 					
@@ -298,127 +298,6 @@
 					<div class="modal-footer">
 						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 						<button type="button" class="btn btn-success" onclick="addTrack()">Add Track</button>
-					</div>
-				</div>
-			</div>
-		</div>
-		
-		<!-- Information Modal -->
-		<div class="modal fade" id="informationModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-			<div class="modal-dialog">
-				<div class="modal-content">
-					
-					<!-- Header -->
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-						<h4 class="modal-title" id="myModalLabel">Track Information</h4>
-					</div>
-					
-					<!-- Body -->
-					<div class="modal-body">
-						
-						<div class="row">
-							<div class="col-md-3">
-								<img src="http://upload.wikimedia.org/wikipedia/en/6/65/KendrickGKMCDeluxe.jpg" width="130px">
-							</div>
-							<div class="col-md-9">
-								<h4><span style="color: red;" class="glyphicon glyphicon-fire" aria-hidden="true"></span> <span style="color: red;">Fire</span> The Blacker the Berry</h4>
-								<p>Artist: Kendrick Lamar</p>
-								<p>Album: The Blacker the Berry</p>
-								<p>Time: 5:37</p>
-							</div>
-						</div>
-						<hr>
-						<p>Played: <b>4,509</b></p>
-						<p>Saved: <b>2,909</b></p>
-						<hr>
-						<p>Owner: Kendrick Lamar (<a href="#">kendricklamar</a>)</p>
-						<p>Added: February 12, 2015</p>
-						<p>Public: Yes</p>
-						<hr>
-						<div class="btn-group btn-group-sm" role="group">
-							<button type="button" class="btn btn-default">Wikipedia</button>
-							<button type="button" class="btn btn-default">Genius</button>
-							<button type="button" class="btn btn-default">iTunes</button>
-						</div>
-						<hr>
-						<!-- AddThis -->
-						<div class="addthis_native_toolbox"></div>
-						
-					</div>
-					
-					<!-- Footer -->
-					<div class="modal-footer">
-						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-					</div>
-				</div>
-			</div>
-		</div>
-		
-		<!-- Edit Modal -->
-		<div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-			<div class="modal-dialog">
-				<div class="modal-content">
-					
-					<!-- Header -->
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-						<h4 class="modal-title" id="myModalLabel">Edit Track</h4>
-					</div>
-					
-					<!-- Body -->
-					<div class="modal-body">
-						
-						<div class="input-group">
-							<span class="input-group-addon">Link</span>
-							<input id="link" type="text" class="form-control" placeholder="Link" autofocus>
-						</div>
-						<br>
-						<div class="input-group">
-							<span class="input-group-addon">Title</span>
-							<input id="title" type="text" class="form-control" placeholder="Title">
-						</div>
-						<br>
-						<div class="input-group">
-							<span class="input-group-addon">Artist</span>
-							<input id="artist" type="text" class="form-control" placeholder="Artist">
-						</div>
-						<br>
-						<div class="input-group">
-							<span class="input-group-addon">Album</span>
-							<input id="album" type="text" class="form-control" placeholder="Album">
-						</div>
-						<br>
-						<div class="input-group">
-							<span class="input-group-addon">Time</span>
-							<input id="time" type="text" class="form-control" placeholder="Time">
-						</div>
-						<br>
-						
-						<p>Genre</p>
-						<select class="form-control">
-							<option>Alternative Rock</option>
-							<option>Dance & EDM</option>
-							<option>Dubstep</option>
-							<option>Hip-Hop & Rap</option>
-							<option>House</option>
-							<option>Indie</option>
-							<option>Metal</option>
-							<option>Pop</option>
-							<option>R&B & Soul</option>
-							<option>Reggae</option>
-							<option>Rock</option>
-						</select>
-						<br>
-						
-						<input type="checkbox" checked> Make track public
-						<p class="help-block">Making a track public helps the Near community. <a href="#">Learn More</a></p>
-					</div>
-					
-					<!-- Footer -->
-					<div class="modal-footer">
-						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-						<button type="button" class="btn btn-success">Save</button>
 					</div>
 				</div>
 			</div>
@@ -667,17 +546,38 @@
 			
 			// Filter
 			function filter() {
-				alert("Filtering...");
+				spinner.spin(target);
+				
+				var query = new Parse.Query(Parse.Object.extend("Track"));
+				query.contains("title", document.getElementById("filter").value);
+				query.ascending("createdAt");
+				query.find({
+					success: function(results) {
+						
+						spinner.stop();
+						
+						document.getElementById("myTable").innerHTML = "";
+						for (var i = 0; i < results.length; i++) { 
+							var object = results[i];
+							
+							var date = new Date(object.createdAt);
+							var saved = date.getMonth() + "/" + date.getDate() + "/" + date.getFullYear();
+							
+							document.getElementById("myTable").innerHTML += '<tr><td><a role="button" class="btn btn-default btn-xs" href="track.php?t=' + object.id + '"> &nbsp; &nbsp; <span class="glyphicon glyphicon-play" aria-hidden="true"></span> &nbsp; &nbsp; </a></td><td>' + object.get('title') + '</td><td>' + object.get('artist') + '</td><td>' + object.get('album') + '</td><td>' + object.get('time') + '</td><td>' + saved + '</td><td><button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#removeModal"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button></td></tr>';
+						}
+					},
+					error: function(error) {
+						spinner.stop();
+						
+						alert("Error: " + error.code + " " + error.message);
+					}
+				});
 			}
 		</script>
 		
 		<!-- Autofocus Workaround -->
 		<script>
 			$('#addModal').on('shown.bs.modal', function() {
-				$(this).find('[autofocus]').focus();
-			});
-			
-			$('#editModal').on('shown.bs.modal', function() {
 				$(this).find('[autofocus]').focus();
 			});
 		</script>

@@ -138,7 +138,7 @@
 					<!-- /Share -->
 					
 					<!-- Edit -->
-					<button type="button" class="btn btn-default btn-block"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Edit</button>
+					<button type="button" class="btn btn-default btn-block" data-toggle="modal" data-target="#editModal"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Edit</button>
 					<!-- /Edit -->
 					
 					<hr>
@@ -163,6 +163,75 @@
 		</div>
 		<!-- /Container -->
 		
+		<!-- Edit Modal -->
+		<div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					
+					<!-- Header -->
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title" id="myModalLabel">Edit Track</h4>
+					</div>
+					
+					<!-- Body -->
+					<div class="modal-body">
+						
+						<div class="input-group">
+							<span class="input-group-addon">Link</span>
+							<input id="link" type="text" class="form-control" placeholder="Link" autofocus>
+						</div>
+						<br>
+						<div class="input-group">
+							<span class="input-group-addon">Title</span>
+							<input id="title" type="text" class="form-control" placeholder="Title">
+						</div>
+						<br>
+						<div class="input-group">
+							<span class="input-group-addon">Artist</span>
+							<input id="artist" type="text" class="form-control" placeholder="Artist">
+						</div>
+						<br>
+						<div class="input-group">
+							<span class="input-group-addon">Album</span>
+							<input id="album" type="text" class="form-control" placeholder="Album">
+						</div>
+						<br>
+						<div class="input-group">
+							<span class="input-group-addon">Time</span>
+							<input id="time" type="text" class="form-control" placeholder="Time">
+						</div>
+						<br>
+						
+						<p>Genre</p>
+						<select class="form-control">
+							<option>Alternative Rock</option>
+							<option>Dance & EDM</option>
+							<option>Dubstep</option>
+							<option>Hip-Hop & Rap</option>
+							<option>House</option>
+							<option>Indie</option>
+							<option>Metal</option>
+							<option>Pop</option>
+							<option>R&B & Soul</option>
+							<option>Reggae</option>
+							<option>Rock</option>
+						</select>
+						<br>
+						
+						<input type="checkbox" checked> Make track public
+						<p class="help-block">Making a track public helps the Near community. <a href="#">Learn More</a></p>
+					</div>
+					
+					<!-- Footer -->
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						<button type="button" class="btn btn-success">Save</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		
 		<script>
 			
 			// Search
@@ -170,6 +239,13 @@
 				window.location.replace("?q=" + document.getElementById("search").value);
 			}
 			
+		</script>
+		
+		<!-- Autofocus Workaround -->
+		<script>
+			$('#editModal').on('shown.bs.modal', function() {
+				$(this).find('[autofocus]').focus();
+			});
 		</script>
 		
 	</body>
