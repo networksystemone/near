@@ -10,66 +10,68 @@
 			include("template.php");
 		?>
 		
+		<style>
+			.input-group-addon {
+				min-width: 65px;
+				text-align: left;
+			}
+		</style>
+		
 	</head>
 	<body>
 		
-		<!-- Facebook -->
-		<div id="fb-root"></div>
-		<script>(function(d, s, id) {
-			var js, fjs = d.getElementsByTagName(s)[0];
-			if (d.getElementById(id)) return;
-			js = d.createElement(s); js.id = id;
-			js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=1433548803550619&version=v2.0";
-			fjs.parentNode.insertBefore(js, fjs);
-			}(document, 'script', 'facebook-jssdk'));
-		</script>
-		<!-- /Facebook -->
-		
-		<!-- Main Script -->
 		<script>
 			Parse.initialize("uH37tzThA3MpgQL4KQ7fOr5OzkXGpvTxr3Zk4Kbu", "3f80eW7OWD4U8h7URD4iYdQ0TvKHSgIha1AahgHq");
 			
-			var GameScore = Parse.Object.extend("Track");
-			var query = new Parse.Query(GameScore);
-			query.get(<?php echo "'" . $_GET['t'] . "'"; ?>, {
+			// Get Track Data
+			var query = new Parse.Query(Parse.Object.extend("Track"));
+			query.get(<?php echo '"' . $_GET['t'] . '"'; ?>, {
 				success: function(gameScore) {
-					document.getElementById("title").innerHTML = '<span class="glyphicon glyphicon-cd" aria-hidden="true"></span> ' + gameScore.get("title")+ ' <small>' + gameScore.get("artist")+ '</small>';
+					
+					document.getElementById("myTitle").innerHTML = '<span class="glyphicon glyphicon-cd" aria-hidden="true"></span> ' + gameScore.get("title") + ' <small>' + gameScore.get("artist") + '</small>';
+					
+					if (gameScore.get("owner") == Parse.User.current().id) document.getElementById("edit").innerHTML = '<br><button type="button" class="btn btn-default btn-block" data-toggle="modal" data-target="#editModal"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Edit</button>';
+					
+					// Fill Out Edit Fields
+					document.getElementById("link").value   = gameScore.get("link");
+					document.getElementById("title").value  = gameScore.get("title");
+					document.getElementById("artist").value = gameScore.get("artist");
+					document.getElementById("album").value  = gameScore.get("album");
+					document.getElementById("time").value   = gameScore.get("time");
 				},
 				error: function(object, error) {
 					alert("Error: " + error.code + " " + error.message);
 				}
 			});
+			
+			// Get Number of Saves
+			var query = new Parse.Query(Parse.Object.extend("Save"));
+			query.equalTo("track", <?php echo '"' . $_GET['t'] . '"'; ?>);
+			query.find({
+				success: function(results) {
+					document.getElementById("saves").innerHTML = results.length;
+				}
+			});
 		</script>
 		
-		<!-- Navigation -->
 		<nav class="navbar navbar-inverse navbar-fixed-top">
 			<div class="container">
 				<div class="navbar-header">
-					
-					<!-- Toggle -->
 					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
 						<span class="sr-only">Toggle navigation</span>
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					
-					<!-- Brand -->
 					<a class="navbar-brand" href="index.php">Near</a>
 				</div>
 				<div id="navbar" class="collapse navbar-collapse">
-					
-					<!-- Left Links -->
 					<ul class="nav navbar-nav">
 						<li><a href="collection.php">Collection</a></li>
 						<li><a href="discover.php">Discover</a></li>
 					</ul>
-					
-					<!-- Right Links -->
 					<ul class="nav navbar-nav navbar-right">
 						<script>
-							Parse.initialize("uH37tzThA3MpgQL4KQ7fOr5OzkXGpvTxr3Zk4Kbu", "3f80eW7OWD4U8h7URD4iYdQ0TvKHSgIha1AahgHq");
-							
 							if (!Parse.User.current()) {
 								document.write('<li><a href="signin.php">Sign In</a></li>');
 								document.write('<li><a href="signup.php">Sign Up</a></li>');
@@ -95,91 +97,94 @@
 				</div>
 			</div>
 		</nav>
-		<!-- /Navigation -->
 		
-		<!-- Container -->
 		<div class="container">
 			
-			<!-- Title -->
-			<h1 id="title"><span class="glyphicon glyphicon-cd" aria-hidden="true"></span></h1>
+			<h1 id="myTitle"><span class="glyphicon glyphicon-cd" aria-hidden="true"></span> Title <small>Artist</small></h1>
 			<br>
-			<!-- /Title -->
 			
-			<!-- Statistics -->
-			<p><span style="color: red;" class="glyphicon glyphicon-fire" aria-hidden="true"></span> <span style="color: red;">Fire</span> &nbsp; <span class="glyphicon glyphicon-play" aria-hidden="true"></span> 10,000 &nbsp; <span class="glyphicon glyphicon-star" aria-hidden="true"></span> 10,000 &nbsp; <span class="glyphicon glyphicon-comment" aria-hidden="true"></span> 10,000</p>
-			<!-- /Statistics -->
+			<p><span style="color: red;" class="glyphicon glyphicon-fire" aria-hidden="true"></span> <span style="color: red;">Fire</span> &nbsp; <span class="glyphicon glyphicon-play" aria-hidden="true"></span> <span id="plays">0</span> &nbsp; <span class="glyphicon glyphicon-star" aria-hidden="true"></span> <span id="saves">0</span> &nbsp; <span class="glyphicon glyphicon-comment" aria-hidden="true"></span> <span id="comments">0</span></p>
 			
-			<!-- Row -->
 			<div class="row">
 				
-				<!-- Main -->
 				<div class="col-md-10">
-					
 					<div class="well">
 						<iframe width="100%" height="500px" src="https://www.youtube.com/embed/6AhXSoKa8xw?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
 					</div>
+					<div class="fb-comments" data-href="http://developers.facebook.com/docs/plugins/comments/" data-width="100%" data-numposts="10" data-colorscheme="light"></div>
 					
 					<!-- Facebook -->
-					<div class="fb-comments" data-href="http://developers.facebook.com/docs/plugins/comments/" data-width="100%" data-numposts="10" data-colorscheme="light"></div>
+					<div id="fb-root"></div>
+					<script>(function(d, s, id) {
+						var js, fjs = d.getElementsByTagName(s)[0];
+						if (d.getElementById(id)) return;
+						js = d.createElement(s); js.id = id;
+						js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=1433548803550619&version=v2.0";
+						fjs.parentNode.insertBefore(js, fjs);
+						}(document, 'script', 'facebook-jssdk'));
+					</script>
+					<!-- /Facebook -->
 				</div>
-				<!-- /Main -->
 				
-				<!-- Side -->
 				<div class="col-md-2">
 					
-					<!-- Save -->
-					<button type="button" class="btn btn-success btn-block"><span class="glyphicon glyphicon-star" aria-hidden="true"></span> Save</button>
+					<button type="button" class="btn btn-success btn-block" onclick="save()" id="save"><span class="glyphicon glyphicon-star" aria-hidden="true"></span> Save</button>
 					<br>
-					<!-- /Save -->
+					<button type="button" class="btn btn-default btn-block" data-toggle="modal" data-target="#shareModal"><span class="glyphicon glyphicon-share-alt" aria-hidden="true"></span> Share</button>
 					
-					<!-- Share -->
-					<button type="button" class="btn btn-default btn-block"><span class="glyphicon glyphicon-share-alt" aria-hidden="true"></span> Share</button>
-					<br>
-					<!-- /Share -->
-					
-					<!-- Edit -->
-					<button type="button" class="btn btn-default btn-block" data-toggle="modal" data-target="#editModal"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Edit</button>
-					<!-- /Edit -->
+					<div id="edit"></div>
 					
 					<hr>
 					<p>Owner: Kendrick Lamar (<a href="#">kendricklamar</a>)</p>
 					<p>Added: February 12, 2015</p>
 					<hr>
-					<p><a href="#">Genius</a></p>
-					<p><a href="#">iTunes</a></p>
+					<p><a href="#" target="blank">Genius</a></p>
+					<p><a href="#" target="blank">iTunes</a></p>
 				</div>
-				<!-- /Side -->
-				
 			</div>
-			<!-- /Row -->
 			
-			<!-- Footer -->
 			<hr>
 			<footer>
 				<p>&copy; 2015 Figure Inc. &middot; Made in Seattle &middot; <a href="#">Company</a> &middot; <a href="#">Downloads</a> &middot; <a href="#">Blog &middot; <a href="#">Careers</a> &middot; <a href="#">Forums</a> &middot; <a href="#">Help Center</a></p>
 			</footer>
-			<!-- /Footer -->
-			
 		</div>
-		<!-- /Container -->
+		
+		<!-- Share Modal -->
+		<div class="modal fade" id="shareModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title" id="myModalLabel">Share Track</h4>
+					</div>
+					
+					<div class="modal-body">
+						<p>Share this track with your friends.</p>
+					</div>
+					
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
 		
 		<!-- Edit Modal -->
 		<div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 			<div class="modal-dialog">
 				<div class="modal-content">
 					
-					<!-- Header -->
 					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 						<h4 class="modal-title" id="myModalLabel">Edit Track</h4>
 					</div>
 					
-					<!-- Body -->
 					<div class="modal-body">
 						
 						<div class="input-group">
 							<span class="input-group-addon">Link</span>
-							<input id="link" type="text" class="form-control" placeholder="Link" autofocus>
+							<input id="link" type="text" class="form-control" placeholder="Link">
 						</div>
 						<br>
 						<div class="input-group">
@@ -203,7 +208,6 @@
 						</div>
 						<br>
 						
-						<p>Genre</p>
 						<select class="form-control">
 							<option>Alternative Rock</option>
 							<option>Dance & EDM</option>
@@ -223,29 +227,48 @@
 						<p class="help-block">Making a track public helps the Near community. <a href="#">Learn More</a></p>
 					</div>
 					
-					<!-- Footer -->
 					<div class="modal-footer">
 						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-						<button type="button" class="btn btn-success">Save</button>
+						<button type="button" class="btn btn-success" onclick="saveChanges()">Save</button>
 					</div>
 				</div>
 			</div>
 		</div>
 		
 		<script>
+			var co = 0;
 			
-			// Search
-			function search() {
-				window.location.replace("?q=" + document.getElementById("search").value);
+			var query = new Parse.Query(Parse.Object.extend("Save"));
+			query.equalTo("owner", Parse.User.current().id);
+			query.find({
+				success: function(results) {
+					
+					for (var i = 0; i < results.length; i++) { 
+						var object = results[i];
+						
+						if (object.get('track') == <?php echo "'" . $_GET["t"] . "'"; ?>) {
+							document.getElementById("save").innerHTML = '<span class="glyphicon glyphicon-star" aria-hidden="true"></span> Remove';
+						}
+						
+					}
+				}
+			});
+		
+			function save() {
+				
+				if (co == 0) {
+					document.getElementById("save").innerHTML = '<span class="glyphicon glyphicon-star" aria-hidden="true"></span> Remove';
+					co = 1;
+				} else {
+					document.getElementById("save").innerHTML = '<span class="glyphicon glyphicon-star" aria-hidden="true"></span> Save';
+					co = 0;
+				}
 			}
 			
-		</script>
+			function saveChanges() {
+				location.reload();
+			}
 		
-		<!-- Autofocus Workaround -->
-		<script>
-			$('#editModal').on('shown.bs.modal', function() {
-				$(this).find('[autofocus]').focus();
-			});
 		</script>
 		
 	</body>

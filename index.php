@@ -13,36 +13,24 @@
 	</head>
 	<body>
 		
-		<!-- Navigation -->
 		<nav class="navbar navbar-inverse navbar-fixed-top">
 			<div class="container">
 				<div class="navbar-header">
-					
-					<!-- Toggle -->
 					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
 						<span class="sr-only">Toggle navigation</span>
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<!-- /Toggle -->
-					
-					<!-- Brand -->
 					<a class="navbar-brand" href="index.php">Near</a>
-					<!-- /Brand -->
-					
 				</div>
 				<div id="navbar" class="collapse navbar-collapse">
-					
-					<!-- Left Links -->
 					<ul class="nav navbar-nav">
 						<li><a href="collection.php">Collection</a></li>
 						<li><a href="discover.php"  >Discover</a  ></li>
 					</ul>
-					<!-- /Left Links -->
-					
-					<!-- Right Links -->
 					<ul class="nav navbar-nav navbar-right">
+						
 						<script>
 							Parse.initialize("uH37tzThA3MpgQL4KQ7fOr5OzkXGpvTxr3Zk4Kbu", "3f80eW7OWD4U8h7URD4iYdQ0TvKHSgIha1AahgHq");
 							
@@ -68,8 +56,6 @@
 							</ul>
 						</li>
 					</ul>
-					<!-- /Right Links -->
-					
 				</div>
 			</div>
 		</nav>
@@ -85,7 +71,6 @@
 		</div>
 		<!-- /Jumbotron -->
 		
-		<!-- Container -->
 		<div class="container">
 			
 			<!-- Details -->
@@ -113,7 +98,6 @@
 			<div class="well">
 				<img src="images/screenshot.png" width="100%">
 			</div>
-			
 			<!-- /Screenshot -->
 			
 			<!-- Details -->
@@ -143,9 +127,7 @@
 				<p>&copy; 2015 Figure Inc. &middot; Made in Seattle &middot; <a href="#">Company</a> &middot; <a href="#">Downloads</a> &middot; <a href="#">Blog &middot; <a href="#">Careers</a> &middot; <a href="#">Forums</a> &middot; <a href="#">Help Center</a></p>
 			</footer>
 			<!-- /Footer -->
-			
 		</div>
-		<!-- /Container -->
 		
 	</body>
 </html>

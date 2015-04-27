@@ -24,7 +24,6 @@
 			Parse.initialize("uH37tzThA3MpgQL4KQ7fOr5OzkXGpvTxr3Zk4Kbu", "3f80eW7OWD4U8h7URD4iYdQ0TvKHSgIha1AahgHq");
 		</script>
 		
-		<!-- Navigation -->
 		<nav class="navbar navbar-inverse navbar-fixed-top">
 			<div class="container">
 				<div class="navbar-header">
@@ -41,7 +40,6 @@
 						<li><a href="collection.php">Collection</a></li>
 						<li><a href="discover.php">Discover</a></li>
 					</ul>
-					
 					<ul class="nav navbar-nav navbar-right">
 						<script>
 							document.write('<li class="active"><a href="account.php">' + Parse.User.current().get("name") + '</a></li>');
@@ -64,17 +62,12 @@
 				</div>
 			</div>
 		</nav>
-		<!-- /Navigation -->
 		
-		<!-- Container -->
 		<div class="container">
 			
-			<!-- Title -->
 			<h1><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Account <small>Make changes to your Near account here.</small></h1>
 			<br>
-			<!-- /Title -->
 			
-			<!-- Row -->
 			<div class="row">
 				<div class="col-md-2">
 					
@@ -92,6 +85,27 @@
 					
 					<!-- Delete Account -->
 					<button class="btn btn-danger btn-block" type="button" data-toggle="modal" data-target="#deleteAccountModal">Delete Account</button>
+					
+					<!-- Delete Account Modal -->
+					<div class="modal fade" id="deleteAccountModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<div class="modal-header">
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+									<h4 class="modal-title" id="myModalLabel">Delete Account</h4>
+								</div>
+								<div class="modal-body">
+									<p>Are you sure you would like to delete your account? This action is permanent. Type your passwod if you wish to proceed.</p>
+									<input id="password" type="password" class="form-control" placeholder="Password">
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+									<button type="button" class="btn btn-danger" onclick="deleteAccount()">Delete Account</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					
 				</div>
 				<div class="col-md-6">
 					
@@ -127,51 +141,22 @@
 					<!-- Save -->
 					<button class="btn btn-success" type="button" onclick="save()">Save</button>
 				</div>
+				
 				<div class="col-md-4">
 				</div>
 			</div>
 			<!-- /Row -->
 			
-			<!-- Footer -->
 			<hr>
 			<footer>
 				<p>&copy; 2015 Figure Inc. &middot; Made in Seattle &middot; <a href="#">Company</a> &middot; <a href="#">Downloads</a> &middot; <a href="#">Blog &middot; <a href="#">Careers</a> &middot; <a href="#">Forums</a> &middot; <a href="#">Help Center</a></p>
 			</footer>
-			<!-- /Footer -->
 			
 		</div>
-		<!-- /Container -->
-		
-		<!-- ########## Modals ########## -->
-		
-		<!-- Delete Account Modal -->
-		<div class="modal fade" id="deleteAccountModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-			<div class="modal-dialog">
-				<div class="modal-content">
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-						<h4 class="modal-title" id="myModalLabel">Delete Account</h4>
-					</div>
-					<div class="modal-body">
-						<p>Are you sure you would like to delete your account? This action is permanent. Type your passwod if you wish to proceed.</p>
-						<input id="password" type="password" class="form-control" placeholder="Password">
-					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-						<button type="button" class="btn btn-danger" onclick="deleteAccount()">Delete Account</button>
-					</div>
-				</div>
-			</div>
-		</div>
-		
-		<!-- ########## JavaScript ########## -->
 		
 		<script>
-				
 			// Redirect
-			if (!Parse.User.current()) {
-				window.location.replace("signin.php");
-			}
+			if (!Parse.User.current()) window.location.replace("signin.php");
 			
 			document.getElementById("name").value = Parse.User.current().get("name");
 			document.getElementById("email").value = Parse.User.current().get("email");
@@ -186,8 +171,8 @@
 			// Save
 			function save() {
 				var currentUser = Parse.User.current();
-				currentUser.set("name", document.getElementById("name").value);
-				currentUser.set("email", document.getElementById("email").value);
+				currentUser.set("name",     document.getElementById("name").value);
+				currentUser.set("email",    document.getElementById("email").value);
 				currentUser.set("username", document.getElementById("username").value);
 				if (document.getElementById("password").value) currentUser.set("password", document.getElementById("password").value);
 				

@@ -13,7 +13,6 @@
 	</head>
 	<body>
 		
-		<!-- Navigation -->
 		<nav class="navbar navbar-inverse navbar-fixed-top">
 			<div class="container">
 				<div class="navbar-header">
@@ -30,8 +29,8 @@
 						<li><a href="collection.php">Collection</a></li>
 						<li class="active"><a href="discover.php">Discover</a></li>
 					</ul>
-					
 					<ul class="nav navbar-nav navbar-right">
+						
 						<script>
 							Parse.initialize("uH37tzThA3MpgQL4KQ7fOr5OzkXGpvTxr3Zk4Kbu", "3f80eW7OWD4U8h7URD4iYdQ0TvKHSgIha1AahgHq");
 							
@@ -60,7 +59,6 @@
 				</div>
 			</div>
 		</nav>
-		<!-- /Navigation -->
 		
 		<!-- Carousel -->
 		<div id="carousel-example-generic" class="carousel slide" data-ride="carousel" data-interval="5000">
