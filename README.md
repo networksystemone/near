@@ -11,7 +11,7 @@ Store and stream music links, and create your own library to share with friends 
 
 ## Notice
 
-Pass uses [Parse](https://www.parse.com) as a BaaS. Please sign up for an account at [Parse](https://www.parse.com) and use your own application keys.
+Housemate uses [Parse](https://www.parse.com) as a BaaS. Please sign up for an account at [Parse](https://www.parse.com) and use your own application keys.
 
 ## License
 
